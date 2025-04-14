@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deli Cure</title>
-    <link rel="icon" type="image/x-icon" href="/images/Delicure.ico" />
+    <link rel="icon" type="image/x-icon" href="images/Delicure.ico" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -26,133 +26,13 @@
     />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        font-family: Verdana, sans-serif;
-      }
-      .mySlides {
-        display: none;
-      }
-      img {
-        vertical-align: middle;
-      }
-
-      /* Slideshow container */
-      .slideshow-container {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
-      }
-
-      /* Caption text */
-      .text {
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-      }
-
-      /* Number text (1/3 etc) */
-      .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-      }
-
-      /* The dots/bullets/indicators */
-      .dot {
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
-
-      .active {
-        background-color: #717171;
-      }
-
-      /* Fading animation */
-      .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
-      }
-
-      @keyframes fade {
-        from {
-          opacity: 0.4;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      /* On smaller screens, decrease text size */
-      @media only screen and (max-width: 300px) {
-        .text {
-          font-size: 11px;
-        }
-      }
-
-      /* Style for small images */
-      .gallery img {
-        width: 250px;
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .gallery img:hover {
-        transform: scale(1.1);
-      }
-
-      /* Modal styles */
-      .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        justify-content: center;
-        align-items: center;
-        z-index: 2000;
-        background-color: rgb(242, 242, 242);
-      }
-
-      .modal img {
-        max-width: 90%;
-        max-height: 90%;
-        transition: transform 0.3s;
-      }
-
-      /* Close button */
-      .close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        font-size: 40px;
-        color: white;
-        cursor: pointer;
-      }
-    </style>
   </head>
   <body id="pocetna">
     <navbar>
       <nav class="navbar sticky-top navbar-expand-lg st navbar-light">
         <div class="container d-flex justify-content-between">
           <div>
-            <img src="/images/Logo.png" alt="logo" class="logo" />
+            <img src="images/Logo.png" alt="logo" class="logo" />
             <button
               class="navbar-toggler"
               type="button"
@@ -173,15 +53,15 @@
               <li class="nav-item">
                 <a class="nav-link" href="#o_nama">O nama</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="#galerija">Galerija</a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link" href="#sastojci">Sastojci</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="#ponuda">Ponuda</a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link" href="#porucivanje">Porucivanje</a>
               </li>
@@ -201,82 +81,90 @@
       <h1 id="o_nama">O nama</h1>
       <div class="line"></div>
       <div class="container">
-        <p>
-          Osnovani 2025. godine, s misijom da spojimo vrhunske ukuse i vrhunski
-          doživljaj. Naši charcuterie box specijaliteti pažljivo su kreirani od
-          najfinijih sireva, suhomesnatih delikatesa i pomno biranih dodataka iz
-          cele Evrope. Svaka kutija je priča o harmoniji ukusa, savršena za
-          posebne trenutke, poklone ili jednostavno uživanje.
-          <br />
-          <br />
-          Dobrodošli u svet gde se strast prema hrani pretvara u umetnost.
-        </p>
-        <div class="image-holder-section">
-          <div>
-            <img src="/images/making_1.jpg" class="making_1" />
-            <img src="/images/making_2.jpg" class="making_2" />
-          </div>
-          <div>
+        <div class="row">
+          <div class="col-md-6">
             <p>
+              Osnovani 2025. godine, s misijom da spojimo vrhunske ukuse i vrhunski
+              doživljaj. Naši charcuterie box specijaliteti pažljivo su kreirani od
+              najfinijih sireva, suhomesnatih delikatesa i pomno biranih dodataka iz
+              cele Evrope. Svaka kutija je priča o harmoniji ukusa, savršena za
+              posebne trenutke, poklone ili jednostavno uživanje.
+              <br>
+              <br>
               Naša kutija je osmišljena da vam pruži jedinstveno iskustvo
               uživanja u vrhunskim evropskim specijalitetima, spajajući
               bogatstvo ukusa i tekstura u svakoj kombinaciji.
+              <br>
+              <br>
+              Dobrodošli u svet gde se strast prema hrani pretvara u umetnost.
             </p>
+         
+          </div>
+          <div class="col-md-6">
+            <div class="image-holder-section">
+              <div>
+                <img src="images/making_1.jpg" class="making_1" alt="Proces izrade 1" />
+              </div>
+              <div>
+                <img src="images/making_2.jpg" class="making_2" alt="Proces izrade 2" />
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
     <section class="galerija">
-      <h1 id="galerija">Galerija</h1>
-      <div class="line"></div>
+      <!-- <h1 id="galerija">Galerija</h1> -->
+      <!-- <div class="line"></div> -->
       <div class="container">
         <!-- Swiper -->
         <div class="swiper mySwiper">
-          <div class="swiper-wrapper gallery">
+          <!-- <div class="swiper-wrapper gallery">
             <div class="swiper-slide">
-              <img src="/images/slider_1.jpg" onclick="openModal(this)" />
+              <img src="images/slider_1.jpg" onclick="openModal(this)" />
             </div>
             <div class="swiper-slide">
-              <img src="/images/slider_2.jpg" onclick="openModal(this)" />
+              <img src="images/slider_2.jpg" onclick="openModal(this)" />
             </div>
             <div class="swiper-slide">
-              <img src="/images/slider_3.jpg" onclick="openModal(this)" />
+              <img src="images/slider_3.jpg" onclick="openModal(this)" />
             </div>
             <div class="swiper-slide">
-              <img src="/images/slider_4.jpg" onclick="openModal(this)" />
+              <img src="images/slider_4.jpg" onclick="openModal(this)" />
             </div>
             <div class="swiper-slide">
-              <img src="/images/slider_5.jpg" onclick="openModal(this)" />
+              <img src="images/slider_5.jpg" onclick="openModal(this)" />
             </div>
             <div class="swiper-slide">
-              <img src="/images/slider_6.jpg" onclick="openModal(this)" />
+              <img src="images/slider_6.jpg" onclick="openModal(this)" />
             </div>
-          </div>
+          </div> -->
           <!-- <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div> -->
         </div>
-        <div class="swiper mySwiper2">
+        <!-- <div class="swiper mySwiper2">
           <div class="swiper-wrapper gallery">
             <div class="swiper-slide">
-              <img src="/images/slider_7.jpg" onclick="openModal(this)" />
+              <img src="images/slider_7.jpg" onclick="openModal(this)" />
             </div>
             <div class="swiper-slide">
-              <img src="/images/slider_8.jpg" onclick="openModal(this)" />
+              <img src="images/slider_8.jpg" onclick="openModal(this)" />
             </div>
             <div class="swiper-slide">
-              <img src="/images/slider_9.jpg" onclick="openModal(this)" />
+              <img src="images/slider_9.jpg" onclick="openModal(this)" />
             </div>
             <div class="swiper-slide">
-              <img src="/images/slider_10.jpg" onclick="openModal(this)" />
+              <img src="images/slider_10.jpg" onclick="openModal(this)" />
             </div>
             <div class="swiper-slide">
-              <img src="/images/slider_11.jpg" onclick="openModal(this)" />
+              <img src="images/slider_11.jpg" onclick="openModal(this)" />
             </div>
             <div class="swiper-slide">
-              <img src="/images/slider_12.jpg" onclick="openModal(this)" />
+              <img src="images/slider_12.jpg" onclick="openModal(this)" />
             </div>
-          </div>
+          </div> -->
           <!-- <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div> -->
@@ -289,6 +177,18 @@
       <div class="lista">
         <div class="sastojak">
           <p>
+            Bri ima glatku, kremastu teksturu i blag, masni ukus sa blagim
+            notama orašastih plodova i gljiva. Njegova narandžasta kora dodaje
+            dodatnu dimenziju teksturi. Saće kao savrsen dodatak bri siru na kojem se i nalazi predstavlja savršenu kombinaciju punog ukusa i slatkoće.
+            Suva španska kobasica je napravljena od bogatog ukusnog iberijskog mesa i prirodnom belom korom koja čuva aromu i daje zemljastu notu, idealna  je za fine zalogaje uz sir i vino.
+         
+          </p>
+          <img src="images/sastojci/bri-sace-kobasica.jpg" alt="Bri, saće i kobasica" />
+        </div>
+        <div class="sastojak">
+          <img src="images/sastojci/gauda-grozdje-suvivrat.jpg" alt="Gauda, grožđe i suvi vrat" />
+          <p>
+          
             Gauda kao jedan od najpoznatijih holandskih sireva, a naša nemačka
             verzija donosi savršen balans slatkoće i pikantnosti. Suvi vrat iz
             Crne Gore je autentična delikatesa napravljena od pažljivo odabranog
@@ -297,169 +197,230 @@
             Idealan je partner za sireve i orašaste plodove, stvarajući savršen
             balans ukusa.
           </p>
-          <img src="/images/sastojci/bri-sace-kobasica.jpg" />
         </div>
         <div class="sastojak">
-          <img src="/images/sastojci/gauda-grozdje-suvivrat.jpg" />
           <p>
-            Bri ima glatku, kremastu teksturu i blag, masni ukus sa blagim
-            notama orašastih plodova i gljiva. Njegova narandžasta kora dodaje
-            dodatnu dimenziju teksturi. Domaći med sa voćem* i saće dodaju
-            prirodnu slatkoću i autentičan ukus vašem obroku.
-          </p>
+            
+            Crna cokolada obogacuje ukus nasoj kutiji svojim intenzitetom, čak sa 75% kakaa.
+            Uživajte u slatkom i prirodnom ukusu suvih kajsija. Suvo voće je
+            savršen kontrast slanim i pikantnim ukusima ostalih delikatesa u
+            našoj kutiji.
+          
+           </p>
+          <img src="images/sastojci/kajsija-cokolada.jpg" alt="Kajsija i čokolada" />
         </div>
         <div class="sastojak">
+          <img src="images/sastojci/masline-krekeri-prsuta.jpg" alt="Masline, krekeri i pršuta" />
           <p>
             Masline dodaju suptilnu slanost i bogatstvo ukusa. Odabrane su zbog
             svoje kvalitete i savršeno se uklapaju sa sirevima i mesnim
             delicijama. Naši hrskavi krekeri su idealna baza za sireve, meso i
             med. Njihova neutralna i blago slana aroma savršeno dopunjuje bogate
-            ukuse ostalih sastojaka. Pršuta* Ova sušena mesna delicija iz
-            Slovenije pravi je užitak za ljubitelje finih ukusa. Slovenačka
-            pršuta je tanko sečena, sa bogatim, dimljenim ukusom koji savršeno
-            dopunjuje svaki obrok.
-          </p>
-          <img src="/images/sastojci/kajsija-cokolada.jpg" />
-        </div>
-        <div class="sastojak">
-          <img src="/images/sastojci/masline-krekeri-prsuta.jpg" />
-          <p>
-            Uživajte u slatkom i prirodnom ukusu suvih kajsija. Suvo voće je
-            savršen kontrast slanim i pikantnim ukusima ostalih delikatesa u
-            našoj kutiji.
+            ukuse ostalih sastojaka. Goveđa pršuta – suptilna snaga ukusa, dimljena tradicijom i sečena na zalogaje koji govore više od reči.
           </p>
         </div>
         <div class="sastojak">
           <p>
-            Pršuta* Ova sušena mesna delicija iz Slovenije pravi je užitak za
-            ljubitelje finih ukusa. Slovenačka pršuta je tanko sečena, sa
-            bogatim, dimljenim ukusom koji savršeno dopunjuje svaki obrok.
-            Parmezan koji ima zlatno žutu boju, zrnastu teksturu i bogat, pun
-            ukus sa notama oraha i karamele.
-          </p>
-          <img src="/images/sastojci/med-orasasti-gorgonzola.jpg" />
-        </div>
-        <div class="sastojak">
-          <img src="/images/sastojci/parmezan-prsuta.jpg" />
-
-          <p>
-            Domaći med sa voćem* i saće dodaju prirodnu slatkoću i autentičan
-            ukus vašem obroku. Naša kutija sadrži pažljivo odabrane orašaste
+             
+            Domaći med sa liofilizovanim vocem u našoj kuji su to limun i borovnica dodaju prirodnu slatkoću i autentičan ukus vašem obroku. Naša kutija sadrži pažljivo odabrane orašaste
             plodove kao što su bademi, orasi, lešnici i pistaci. Ovi hrskavi i
             hranljivi plodovi dodaju dodatni sloj teksture i ukusa vašem
             gurmanskom iskustvu. Naš kremasti plavi sir iz Danske ima
             jedinstven, oštar ukus i glatku teksturu.
+            </p>
+          <img src="images/sastojci/med-orasasti-gorgonzola.jpg" alt="Med, orašasti plodovi i gorgonzola" />
+        </div>
+        <div class="sastojak">
+          <img src="images/sastojci/parmezan-prsuta.jpg" alt="Parmezan i pršuta" />
+          <p>
+            Pršuta nam dolazi pravo iz  Slovenije i pravi je užitak za ljubitelje finih ukusa. Slovenačka pršuta je tanko sečena, sa boga
+            m, dimljenim ukusom koji savršeno dopunjuje svaki obrok.
+            Grana Padano je sir iz porodice parmezana koji ima zlatno žutu boju, zrnastu teksturu i bogat, pun ukus sa notama oraha i karamele.
+    
           </p>
         </div>
       </div>
     </section>
-    <section>
+    <!-- <section>
       <h1 id="ponuda">Ponuda</h1>
       <div class="line"></div>
-    </section>
-    <section>
+    </section> -->
+    <section class="porucivanje">
       <h1 id="porucivanje">Porucivanje</h1>
       <div class="line"></div>
-      <div class="container order">
-        <label for="mesec">Mesec:</label>
-        <select name="mesec" id="mesec">
-          <option value="Januar">Januar</option>
-          <option value="Februar">Februar</option>
-          <option value="mercedes">Mart</option>
-          <option value="audi">April</option>
-          <option value="mercedes">Maj</option>
-          <option value="audi">Jun</option>
-          <option value="mercedes">Jul</option>
-          <option value="audi">Avgust</option>
-          <option value="mercedes">Septembar</option>
-          <option value="audi">Oktobar</option>
-          <option value="mercedes">Novembar</option>
-          <option value="audi">Decembar</option>
-        </select>
-        <label for="dan">Dan:</label>
-        <select name="dan" id="dan">
-          <option value="1">01</option>
-          <option value="2">02</option>
-          <option value="3">03</option>
-          <option value="4">04</option>
-          <option value="5">05</option>
-          <option value="6">06</option>
-          <option value="7">07</option>
-          <option value="8">08</option>
-          <option value="9">09</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-          <option value="13">13</option>
-          <option value="14">14</option>
-          <option value="15">15</option>
-          <option value="16">16</option>
-          <option value="17">17</option>
-          <option value="18">18</option>
-          <option value="19">19</option>
-          <option value="20">20</option>
-          <option value="21">21</option>
-          <option value="22">22</option>
-          <option value="23">23</option>
-          <option value="24">24</option>
-          <option value="25">25</option>
-          <option value="26">26</option>
-          <option value="27">27</option>
-          <option value="28">28</option>
-          <option value="29">29</option>
-          <option value="30">30</option>
-          <option value="31">31</option>
-        </select>
-        <label for="vreme">Vreme:</label>
-        <select name="vreme" id="vreme">
-          <option value="01">01:00</option>
-          <option value="01:30">01:30</option>
-          <option value="02">02:00</option>
-          <option value="02:30">02:30</option>
-          <option value="03">03:00</option>
-          <option value="03:30">03:30</option>
-          <option value="04">04:00</option>
-          <option value="04:30">04:30</option>
-          <option value="05">05:00</option>
-          <option value="05:30">05:30</option>
-          <option value="06">06:00</option>
-          <option value="06:30">06:30</option>
-          <option value="07">07:00</option>
-          <option value="07:30">07:30</option>
-          <option value="08">08:00</option>
-          <option value="08:30">08:30</option>
-          <option value="09">09:00</option>
-          <option value="09:30">09:30</option>
-          <option value="10">10:00</option>
-          <option value="10:30">10:30</option>
-          <option value="11">11:00</option>
-          <option value="11:30">11:30</option>
-          <option value="12">12:00</option>
-          <option value="12:30">12:30</option>
-          <option value="13">13:00</option>
-          <option value="13:30">13:30</option>
-          <option value="14">14:00</option>
-          <option value="14:30">14:30</option>
-          <option value="15">15:00</option>
-          <option value="15:30">15:30</option>
-          <option value="16">16:00</option>
-          <option value="16:30">16:30</option>
-          <option value="17">17:00</option>
-          <option value="17:30">17:30</option>
-          <option value="18">18:00</option>
-          <option value="18:30">18:30</option>
-          <option value="19">19:00</option>
-          <option value="19:30">19:30</option>
-          <option value="20">20:00</option>
-          <option value="20:30">20:30</option>
-          <option value="21">21:00</option>
-          <option value="21:30">21:30</option>
-          <option value="22">22:00</option>
-          <option value="22:30">22:30</option>
-          <option value="23">23:00</option>
-          <option value="23:30">23:30</option>
-        </select>
+      <div class="container pt-5">
+        <form id="orderForm" action="save-order.php" method="POST">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="porudzbina">
+                <img src="images/porudzbina/mala_1.jpg" alt="">
+                <p>Mala</p>
+                <button type="button" class="btn btn-sm btn-outline-secondary details-btn" data-bs-toggle="modal" data-bs-target="#mala1Modal">Detalji</button>
+                <div class="fixed-price">
+                  <span class="price-label">Cena:</span>
+                  <span class="price-value">6.000 RSD</span>
+                </div>
+                <div class="quantity-controls">
+                  <button type="button" class="quantity-btn minus" onclick="updateQuantity('mala1', -1)">-</button>
+                  <span class="quantity" id="mala1">0</span>
+                  <button type="button" class="quantity-btn plus" onclick="updateQuantity('mala1', 1)">+</button>
+                </div>
+                <div class="product-price">
+                  <span class="price-amount" id="mala1_price">Ukupno: 0 RSD</span>
+                </div>
+                <input type="hidden" name="mala1_quantity" value="0">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="porudzbina">
+                <img src="images/porudzbina/mala_2.jpg" alt="">
+                <p>Mala 2</p>
+                <button type="button" class="btn btn-sm btn-outline-secondary details-btn" data-bs-toggle="modal" data-bs-target="#mala2Modal">Detalji</button>
+                <div class="fixed-price">
+                  <span class="price-label">Cena:</span>
+                  <span class="price-value">6.000 RSD</span>
+                </div>
+                <div class="quantity-controls">
+                  <button type="button" class="quantity-btn minus" onclick="updateQuantity('mala2', -1)">-</button>
+                  <span class="quantity" id="mala2">0</span>
+                  <button type="button" class="quantity-btn plus" onclick="updateQuantity('mala2', 1)">+</button>
+                </div>
+                <div class="product-price">
+                  <span class="price-amount" id="mala2_price">Ukupno: 0 RSD</span>
+                </div>
+                <input type="hidden" name="mala2_quantity" value="0">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="porudzbina">
+                <img src="images/porudzbina/srednja.jpg" alt="">
+                <p>Srednja</p>
+                <button type="button" class="btn btn-sm btn-outline-secondary details-btn" data-bs-toggle="modal" data-bs-target="#srednjaModal">Detalji</button>
+                <div class="fixed-price">
+                  <span class="price-label">Cena:</span>
+                  <span class="price-value">9.000 RSD</span>
+                </div>
+                <div class="quantity-controls">
+                  <button type="button" class="quantity-btn minus" onclick="updateQuantity('srednja', -1)">-</button>
+                  <span class="quantity" id="srednja">0</span>
+                  <button type="button" class="quantity-btn plus" onclick="updateQuantity('srednja', 1)">+</button>
+                </div>
+                <div class="product-price">
+                  <span class="price-amount" id="srednja_price">Ukupno: 0 RSD</span>
+                </div>
+                <input type="hidden" name="srednja_quantity" value="0">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="porudzbina">
+                <img src="images/porudzbina/velika.jpg" alt="">
+                <p>Velika</p>
+                <button type="button" class="btn btn-sm btn-outline-secondary details-btn" data-bs-toggle="modal" data-bs-target="#velikaModal">Detalji</button>
+                <div class="fixed-price">
+                  <span class="price-label">Cena:</span>
+                  <span class="price-value">15.000 RSD</span>
+                </div>
+                <div class="quantity-controls">
+                  <button type="button" class="quantity-btn minus" onclick="updateQuantity('velika', -1)">-</button>
+                  <span class="quantity" id="velika">0</span>
+                  <button type="button" class="quantity-btn plus" onclick="updateQuantity('velika', 1)">+</button>
+                </div>
+                <div class="product-price">
+                  <span class="price-amount" id="velika_price">Ukupno: 0 RSD</span>
+                </div>
+                <input type="hidden" name="velika_quantity" value="0">
+              </div>
+            </div>
+          </div>
+
+          <div class="delivery-time mt-5">
+            <h3 class="text-center mb-4">Vreme dostave</h3>
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="delivery_datetime">Izaberite datum i vreme dostave</label>
+                  <input type="text" class="form-control" id="delivery_datetime" name="delivery_datetime" required>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="customer-info mt-5">
+            <h3 class="text-center mb-4">Vaši podaci</h3>
+            <div class="row justify-content-center">
+              <div class="col-md-10">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group mb-3">
+                      <label for="ime">Ime</label>
+                      <input type="text" class="form-control" id="ime" name="ime" required>
+                    </div>
+                    <div class="form-group mb-3">
+                      <label for="adresa">Adresa</label>
+                      <input type="text" class="form-control" id="adresa" name="adresa" required>
+                    </div>
+                    <div class="form-group mb-3">
+                      <label for="telefon">Broj telefona</label>
+                      <input type="tel" class="form-control" id="telefon" name="telefon" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group mb-3">
+                      <label for="prezime">Prezime</label>
+                      <input type="text" class="form-control" id="prezime" name="prezime" required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout-summary mt-5" style="display: none;">
+            <h3 class="text-center mb-4">Pregled porudžbine</h3>
+            <div class="order-items">
+              <!-- Order items will be dynamically added here -->
+            </div>
+            <div class="order-total">
+              <h4>Ukupno za plaćanje:</h4>
+              <h4 class="total-amount">0 RSD</h4>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <button type="submit" class="submit-btn">Poruči</button>
+          </div>
+        </form>
       </div>
+
+      <!-- Add Flatpickr CSS and JS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/sr.js"></script>
+
+      <!-- Add this to your existing scripts -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Initialize Flatpickr
+          flatpickr("#delivery_datetime", {
+            enableTime: true,
+            dateFormat: "d.m.Y H:i",
+            minDate: "today",
+            time_24hr: true,
+            minuteIncrement: 30,
+            locale: "sr",
+            theme: "light",
+            placeholder: "Izaberite datum i vreme dostave",
+            // Custom colors to match website theme
+            theme: "light",
+            customClass: "delicure-calendar"
+          });
+        });
+      </script>
     </section>
     <footer></footer>
     <!-- Fullscreen Modal -->
@@ -470,105 +431,558 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const dateInput = document.querySelector("#datepicker"); // Ensure it's a valid element
-        if (dateInput) {
-          new AirDatepicker(dateInput, {
-            autoClose: true,
-            dateFormat: "yyyy-MM-dd",
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Swiper only if the element exists
+        const swiperElement = document.querySelector(".mySwiper");
+        if (swiperElement) {
+          var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            freeMode: true,
+            freeModeMomentum: false,
+            speed: 5000,
+            autoplay: {
+              delay: 0,
+              disableOnInteraction: false,
+            },
+            loop: true,
+            breakpoints: {
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
           });
-        } else {
-          console.error("Element with ID #datepicker not found!");
         }
-      });
-    </script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        freeMode: true,
-        freeModeMomentum: false,
-        speed: 5000,
-        autoplay: {
-          delay: 0,
-          disableOnInteraction: false,
-        },
-        loop: true,
-        breakpoints: {
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-      var swiper2 = new Swiper(".mySwiper2", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        freeMode: true,
-        freeModeMomentum: false,
-        speed: 5000,
-        autoplay: {
-          delay: 0,
-          disableOnInteraction: false,
-          reverseDirection: true,
-        },
-        loop: true,
-        breakpoints: {
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-      function openModal(imgElement) {
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("modalImage");
-        modal.style.display = "flex";
-        modalImg.src = imgElement.src;
-      }
 
-      function closeModal() {
-        document.getElementById("imageModal").style.display = "none";
-      }
+        // Initialize second Swiper only if the element exists
+        const swiper2Element = document.querySelector(".mySwiper2");
+        if (swiper2Element) {
+          var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            freeMode: true,
+            freeModeMomentum: false,
+            speed: 5000,
+            autoplay: {
+              delay: 0,
+              disableOnInteraction: false,
+              reverseDirection: true,
+            },
+            loop: true,
+            breakpoints: {
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        }
+
+        function openModal(imgElement) {
+          const modal = document.getElementById("imageModal");
+          const modalImg = document.getElementById("modalImage");
+          if (modal && modalImg) {
+            modal.style.display = "flex";
+            modalImg.src = imgElement.src;
+          }
+        }
+
+        function closeModal() {
+          const modal = document.getElementById("imageModal");
+          if (modal) {
+            modal.style.display = "none";
+          }
+        }
+
+        // Make functions globally available
+        window.openModal = openModal;
+        window.closeModal = closeModal;
+      });
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    
+    <!-- MailerSend Library -->
+    <script src="https://cdn.jsdelivr.net/npm/mailersend@2.0.1/dist/mailersend.min.js"></script>
+    <script>
+      // Check if MailerSend is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log("Checking MailerSend library...");
+        
+        // Only create simulation objects if the real MailerSend is not available
+        if (typeof window.MailerSend === 'undefined') {
+          console.log("MailerSend library not found, using simulation mode");
+          
+          // Create a global MailerSend object with dummy methods for simulation
+          window.MailerSend = function() {
+            console.log("Using simulated MailerSend");
+            return {
+              email: {
+                send: function() {
+                  console.log("Simulating email send");
+                  return Promise.resolve({ success: true, simulated: true });
+                }
+              }
+            };
+          };
+          
+          window.Sender = function() { 
+            console.log("Using simulated Sender");
+            return {}; 
+          };
+          
+          window.Recipient = function() { 
+            console.log("Using simulated Recipient");
+            return {}; 
+          };
+          
+          window.EmailParams = function() {
+            console.log("Using simulated EmailParams");
+            return {
+              setFrom: function() { return this; },
+              setTo: function() { return this; },
+              setReplyTo: function() { return this; },
+              setSubject: function() { return this; },
+              setHtml: function() { return this; },
+              setText: function() { return this; }
+            };
+          };
+          
+          console.log("MailerSend simulation setup complete");
+        } else {
+          console.log("MailerSend library found and ready to use");
+        }
+      });
+    </script>
+    
+    <!-- EmailJS Service -->
+    <script type="module" src="email-service.js"></script>
+    
+    <!-- Scroll Animation Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Check if this is the first visit
+        const hasVisited = sessionStorage.getItem('hasVisitedBefore');
+        
+        // Add animation classes to elements when they come into view
+        const animateOnScroll = function() {
+          const elements = document.querySelectorAll('.o_nama p, .sastojci p, h1, .line, .image-holder-section img');
+          
+          elements.forEach(element => {
+            if (element) {
+              const elementPosition = element.getBoundingClientRect().top;
+              const windowHeight = window.innerHeight;
+              
+              if (elementPosition < windowHeight - 100) {
+                element.classList.add('animated');
+              }
+            }
+          });
+          
+          // Handle sastojak elements differently - only animate once on first visit
+          if (!hasVisited) {
+            const sastojakElements = document.querySelectorAll('.sastojak');
+            sastojakElements.forEach((element, index) => {
+              if (element) {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight - 100) {
+                  // Add a slight delay based on index
+                  setTimeout(() => {
+                    element.classList.add('animate-once');
+                  }, index * 200);
+                }
+              }
+            });
+          } else {
+            // If not first visit, make sure all sastojak elements are visible
+            const sastojakElements = document.querySelectorAll('.sastojak');
+            sastojakElements.forEach(element => {
+              if (element) {
+                element.style.opacity = '1';
+              }
+            });
+          }
+        };
+        
+        // Run on scroll
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Run once on page load
+        animateOnScroll();
+        
+        // Mark that user has visited
+        if (!hasVisited) {
+          sessionStorage.setItem('hasVisitedBefore', 'true');
+        }
+        
+        // Add navbar shadow on scroll
+        window.addEventListener('scroll', function() {
+          const navbar = document.querySelector('.navbar');
+          if (navbar) {
+            if (window.scrollY > 50) {
+              navbar.classList.add('shadow');
+            } else {
+              navbar.classList.remove('shadow');
+            }
+          }
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Product prices (in RSD)
+        const prices = {
+          mala1: 6000,
+          mala2: 6000,
+          srednja: 9000,
+          velika: 15000
+        };
+
+        // Initialize checkout summary and prices
+        updateCheckoutSummary();
+        updateAllPrices();
+
+        // Handle quantity updates
+        window.updateQuantity = function(id, change) {
+          const quantityElement = document.getElementById(id);
+          if (!quantityElement) return;
+          
+          const controls = quantityElement.closest('.quantity-controls');
+          if (!controls) return;
+          
+          const hiddenInput = controls.closest('.porudzbina')?.querySelector('input[type="hidden"]');
+          if (!hiddenInput) return;
+          
+          let currentQuantity = parseInt(quantityElement.textContent);
+          currentQuantity += change;
+          
+          // Prevent negative quantities
+          if (currentQuantity < 0) {
+            currentQuantity = 0;
+          }
+          
+          quantityElement.textContent = currentQuantity;
+          hiddenInput.value = currentQuantity;
+          
+          // Update price for this product
+          updateProductPrice(id);
+          
+          // Update checkout summary
+          updateCheckoutSummary();
+        };
+
+        // Update price for a single product
+        function updateProductPrice(id) {
+          const quantityElement = document.getElementById(id);
+          if (!quantityElement) return;
+          
+          const quantity = parseInt(quantityElement.textContent);
+          const price = prices[id];
+          if (!price) return;
+          
+          const totalPrice = quantity * price;
+          const priceElement = document.getElementById(id + '_price');
+          if (priceElement) {
+            priceElement.textContent = `Ukupno: ${totalPrice.toLocaleString()} RSD`;
+          }
+        }
+
+        // Update all product prices
+        function updateAllPrices() {
+          Object.keys(prices).forEach(id => {
+            updateProductPrice(id);
+          });
+        }
+
+        // Update checkout summary
+        function updateCheckoutSummary() {
+          const checkoutSummary = document.querySelector('.checkout-summary');
+          const orderItems = document.querySelector('.order-items');
+          const totalAmount = document.querySelector('.total-amount');
+          
+          if (!checkoutSummary || !orderItems || !totalAmount) return;
+          
+          // Clear existing items
+          orderItems.innerHTML = '';
+          
+          let total = 0;
+          let hasItems = false;
+          
+          // Add each product to the summary
+          document.querySelectorAll('.porudzbina').forEach(div => {
+            const hiddenInput = div.querySelector('input[type="hidden"]');
+            if (!hiddenInput) return;
+            
+            const quantity = parseInt(hiddenInput.value);
+            if (quantity > 0) {
+              hasItems = true;
+              const productId = div.querySelector('.quantity')?.id;
+              if (!productId) return;
+              
+              const productName = div.querySelector('p')?.textContent || '';
+              const productImage = div.querySelector('img')?.src || '';
+              const price = prices[productId];
+              if (!price) return;
+              
+              const subtotal = price * quantity;
+              total += subtotal;
+              
+              // Create order item element
+              const orderItem = document.createElement('div');
+              orderItem.className = 'order-item';
+              orderItem.innerHTML = `
+                <div class="order-item-info">
+                  <img src="${productImage}" alt="${productName}" class="order-item-image">
+                  <div class="order-item-details">
+                    <span class="order-item-name">${productName}</span>
+                    <div class="order-item-meta">
+                      <span class="order-item-quantity">${quantity} kom</span>
+                      <span class="order-item-price">${subtotal.toLocaleString()} RSD</span>
+                    </div>
+                  </div>
+                </div>
+              `;
+              
+              orderItems.appendChild(orderItem);
+            }
+          });
+          
+          // Show/hide checkout summary
+          checkoutSummary.style.display = hasItems ? 'block' : 'none';
+          
+          // Update total amount
+          totalAmount.textContent = `${total.toLocaleString()} RSD`;
+        }
+
+        // Handle form submission
+        const orderForm = document.getElementById('orderForm');
+        if (orderForm) {
+          orderForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            if (!submitBtn) return;
+            
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Slanje...';
+            submitBtn.disabled = true;
+            
+            // Collect form data
+            const formData = new FormData(this);
+            
+            // Add quantities
+            const mala1Quantity = document.querySelector('input[name="mala1_quantity"]');
+            const mala2Quantity = document.querySelector('input[name="mala2_quantity"]');
+            const srednjaQuantity = document.querySelector('input[name="srednja_quantity"]');
+            const velikaQuantity = document.querySelector('input[name="velika_quantity"]');
+            
+            if (mala1Quantity) formData.append('mala1_quantity', mala1Quantity.value);
+            if (mala2Quantity) formData.append('mala2_quantity', mala2Quantity.value);
+            if (srednjaQuantity) formData.append('srednja_quantity', srednjaQuantity.value);
+            if (velikaQuantity) formData.append('velika_quantity', velikaQuantity.value);
+            
+            // Create order data object
+            const orderData = {
+                customer: {
+                    ime: formData.get('ime'),
+                    prezime: formData.get('prezime'),
+                    adresa: formData.get('adresa'),
+                    telefon: formData.get('telefon'),
+                    email: formData.get('email')
+                },
+                delivery: {
+                    datetime: formData.get('delivery_datetime')
+                },
+                items: {
+                    mala1: {
+                        quantity: parseInt(formData.get('mala1_quantity')),
+                        total: parseInt(formData.get('mala1_quantity')) * 6000
+                    },
+                    mala2: {
+                        quantity: parseInt(formData.get('mala2_quantity')),
+                        total: parseInt(formData.get('mala2_quantity')) * 6000
+                    },
+                    srednja: {
+                        quantity: parseInt(formData.get('srednja_quantity')),
+                        total: parseInt(formData.get('srednja_quantity')) * 9000
+                    },
+                    velika: {
+                        quantity: parseInt(formData.get('velika_quantity')),
+                        total: parseInt(formData.get('velika_quantity')) * 15000
+                    }
+                },
+                total: parseInt(formData.get('mala1_quantity')) * 6000 + 
+                       parseInt(formData.get('mala2_quantity')) * 6000 + 
+                       parseInt(formData.get('srednja_quantity')) * 9000 + 
+                       parseInt(formData.get('velika_quantity')) * 15000
+            };
+            
+            // Process the order using our email service
+            import('./email-service.js').then(module => {
+              module.processOrder(orderData)
+                .then(result => {
+                  if (result.success) {
+                    // Show success message
+                    if (result.simulated) {
+                      alert('Vaša porudžbina je uspešno primljena. (Simulacija slanja emaila)');
+                    } else {
+                      alert('Vaša porudžbina je uspešno primljena. Kontaktiraćemo vas uskoro.');
+                    }
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Reset quantities
+                    if (mala1Quantity) mala1Quantity.value = 0;
+                    if (mala2Quantity) mala2Quantity.value = 0;
+                    if (srednjaQuantity) srednjaQuantity.value = 0;
+                    if (velikaQuantity) velikaQuantity.value = 0;
+                    
+                    // Update totals
+                    updateCheckoutSummary();
+                  } else {
+                    // Show error message
+                    alert('Došlo je do greške prilikom slanja porudžbine. Molimo pokušajte ponovo.');
+                    console.error('Order processing error:', result.error);
+                  }
+                })
+                .catch(error => {
+                  console.error('Error:', error);
+                  alert('Došlo je do greške prilikom slanja porudžbine. Molimo pokušajte ponovo.');
+                })
+                .finally(() => {
+                  // Reset button state
+                  submitBtn.innerHTML = originalText;
+                  submitBtn.disabled = false;
+                });
+            });
+          });
+        }
+      });
+    </script>
+    <!-- Product Detail Modals -->
+    <!-- Mala 1 Modal -->
+    <div class="modal fade" id="mala1Modal" tabindex="-1" aria-labelledby="mala1ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="mala1ModalLabel">Mala kutija 1</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="images/porudzbina/mala_1.jpg" alt="Mala kutija 1" class="img-fluid mb-3">
+            <p>Detalji o Maloj kutiji 1:</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+            <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mala 2 Modal -->
+    <div class="modal fade" id="mala2Modal" tabindex="-1" aria-labelledby="mala2ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="mala2ModalLabel">Mala kutija 2</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="images/porudzbina/mala_2.jpg" alt="Mala kutija 2" class="img-fluid mb-3">
+            <p>Detalji o Maloj kutiji 2:</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+            <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Srednja Modal -->
+    <div class="modal fade" id="srednjaModal" tabindex="-1" aria-labelledby="srednjaModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="srednjaModalLabel">Srednja kutija</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="images/porudzbina/srednja.jpg" alt="Srednja kutija" class="img-fluid mb-3">
+            <p>Detalji o Srednjoj kutiji:</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+            <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Velika Modal -->
+    <div class="modal fade" id="velikaModal" tabindex="-1" aria-labelledby="velikaModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="velikaModalLabel">Velika kutija</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="images/porudzbina/velika.jpg" alt="Velika kutija" class="img-fluid mb-3">
+            <p>Detalji o Velikoj kutiji:</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+            <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

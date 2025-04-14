@@ -1,0 +1,32 @@
+{
+    "timestamp": "2025-04-06 18:49:54",
+    "customer": {
+        "ime": "Nikola",
+        "prezime": "Curcic",
+        "adresa": "Radnicka 2",
+        "telefon": "0669366216",
+        "email": "nikolacurcic190@gmail.com"
+    },
+    "delivery": {
+        "datetime": "01.05.2025 12:00"
+    },
+    "items": {
+        "mala1": {
+            "quantity": 1,
+            "total": 6000
+        },
+        "mala2": {
+            "quantity": 2,
+            "total": 12000
+        },
+        "srednja": {
+            "quantity": 3,
+            "total": 27000
+        },
+        "velika": {
+            "quantity": 4,
+            "total": 60000
+        }
+    },
+    "total": 105000
+}

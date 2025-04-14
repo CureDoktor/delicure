@@ -1,0 +1,6 @@
+{
+    "to": "nikolacurcic190@gmail.com",
+    "subject": "Test porud\u017ebina - Deli Cure",
+    "message": "\r\n<h2>Test porud\u017ebina<\/h2>\r\n<p><strong>Ime:<\/strong> Test<\/p>\r\n<p><strong>Prezime:<\/strong> Korisnik<\/p>\r\n<p><strong>Adresa:<\/strong> Test adresa<\/p>\r\n<p><strong>Telefon:<\/strong> 0123456789<\/p>\r\n<p><strong>Email:<\/strong> test@example.com<\/p>\r\n<p><strong>Datum i vreme dostave:<\/strong> 2025-04-06 18:49:31<\/p>\r\n<h3>Poru\u010deni proizvodi:<\/h3>\r\n<ul>\r\n<li>Mala 1 - 1 kom. (Ukupno: 6000 RSD)<\/li>\r\n<li>Srednja - 1 kom. (Ukupno: 9000 RSD)<\/li>\r\n<\/ul>\r\n<p><strong>Ukupno za pla\u0107anje:<\/strong> 15000 RSD<\/p>",
+    "timestamp": "2025-04-06 18:49:31"
+}
