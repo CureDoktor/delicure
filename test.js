@@ -28,7 +28,7 @@ async function sendEmail() {
       return;
     }
 
-    const sentFrom = new window.MailerSend.Sender("orders@delicure.com", "Deli Cure Orders");
+    const sentFrom = new window.MailerSend.Sender("info@delicure.com", "Deli Cure Orders");
     console.log("Sender created");
 
     const recipients = [
