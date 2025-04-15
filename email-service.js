@@ -83,7 +83,7 @@ export async function sendOrderEmail(orderData) {
         apiKey: 'mlsn.7c3aab933e4b719f008f2bb425797a11be4383a4ac5deb8f0a92895b333fd55d' // Your MailerSend API key
       });
 
-      const sentFrom = new window.Sender("orders@delicure.com", "Deli Cure Orders");
+      const sentFrom = new window.Sender("info@delicure.rs", "Deli Cure Orders");
       const recipients = [
         new window.Recipient(orderData.customer.email, `${orderData.customer.ime} ${orderData.customer.prezime}`)
       ];
