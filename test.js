@@ -10,21 +10,33 @@ async function sendEmail() {
 
     console.log("Starting email send process...");
     
+    // Log the available MailerSend object to see its structure
+    console.log("MailerSend object:", window.MailerSend);
+    
     const mailerSend = new window.MailerSend({
       apiKey: "mlsn.7c3aab933e4b719f008f2bb425797a11be4383a4ac5deb8f0a92895b333fd55d",
     });
 
     console.log("MailerSend instance created");
 
-    const sentFrom = new window.Sender("orders@delicure.com", "Deli Cure Orders");
+    // Check if the required classes are available
+    if (typeof window.MailerSend.Sender === 'undefined' || 
+        typeof window.MailerSend.Recipient === 'undefined' || 
+        typeof window.MailerSend.EmailParams === 'undefined') {
+      console.error("Required MailerSend classes not found");
+      alert("Email service configuration error. Please contact support.");
+      return;
+    }
+
+    const sentFrom = new window.MailerSend.Sender("orders@delicure.com", "Deli Cure Orders");
     console.log("Sender created");
 
     const recipients = [
-      new window.Recipient("nikola_998@yahoo.com", "Nikola")
+      new window.MailerSend.Recipient("nikola_998@yahoo.com", "Nikola")
     ];
     console.log("Recipients created");
 
-    const emailParams = new window.EmailParams()
+    const emailParams = new window.MailerSend.EmailParams()
       .setFrom(sentFrom)
       .setTo(recipients)
       .setReplyTo(sentFrom)
