@@ -23,42 +23,41 @@ export default async function handler(req, res) {
     
     console.log("Initializing MailerSend client");
     
-    // Initialize the MailerSend client
-    const mailerSend = new MailerSend({
-      apiKey: process.env.MAILERSEND_API_KEY,
+    // Try a simpler approach using fetch directly to the MailerSend API
+    console.log("Using direct API call approach");
+    
+    const response = await fetch('https://api.mailersend.com/v1/email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.MAILERSEND_API_KEY}`
+      },
+      body: JSON.stringify({
+        from: {
+          email: "info@delicure.rs",
+          name: "Deli Cure Orders"
+        },
+        to: [
+          {
+            email: to,
+            name: to.split('@')[0]
+          }
+        ],
+        subject: subject,
+        html: html,
+        text: text
+      })
     });
-
-    console.log("Creating sender");
     
-    // Create the sender
-    const sentFrom = new Sender("info@delicure.com", "Deli Cure Orders");
-
-    console.log("Creating recipients");
+    const responseData = await response.json();
+    console.log("MailerSend API response:", responseData);
     
-    // Create the recipients
-    const recipients = [
-      new Recipient(to, to.split('@')[0])
-    ];
-
-    console.log("Creating email parameters");
+    if (!response.ok) {
+      throw new Error(`MailerSend API error: ${JSON.stringify(responseData)}`);
+    }
     
-    // Create the email parameters
-    const emailParams = new EmailParams()
-      .setFrom(sentFrom)
-      .setTo(recipients)
-      .setReplyTo(sentFrom)
-      .setSubject(subject)
-      .setHtml(html)
-      .setText(text);
-
-    console.log("Sending email");
-    
-    // Send the email
-    const result = await mailerSend.email.send(emailParams);
-    console.log("Email sent successfully:", result);
-
     // Return success
-    return res.status(200).json({ success: true, message: 'Email sent successfully', result });
+    return res.status(200).json({ success: true, message: 'Email sent successfully', result: responseData });
   } catch (error) {
     console.error('Error sending email:', error);
     return res.status(500).json({ 
