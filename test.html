@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Include MailerSend library from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/mailersend@2.1.0/dist/mailersend.min.js" defer></script>
-    <script src="test.js" defer></script>
+    <script src="https://unpkg.com/mailersend@2.1.0/dist/mailersend.min.js"></script>
+    <script>
+        // Check if MailerSend is loaded
+        window.addEventListener('load', function() {
+            if (typeof window.MailerSend === 'undefined') {
+                console.error("MailerSend library failed to load");
+                alert("Email service is currently unavailable. Please try again later.");
+            } else {
+                console.log("MailerSend library loaded successfully");
+            }
+        });
+    </script>
+    <script src="test.js"></script>
 </head>
 <body>
     <button onclick="sendEmail()">Send Email</button>
