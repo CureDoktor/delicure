@@ -80,7 +80,7 @@ export async function sendOrderEmail(orderData) {
       
       // Use the MailerSend library loaded via CDN
       const mailerSend = new window.MailerSend({
-        apiKey: 'mlsn.b4b2268fab07419b8dc4312286a8d1307ba9698cd7676caa9d11fe1b67ca9f69' // Your MailerSend API key
+        apiKey: 'mlsn.7c3aab933e4b719f008f2bb425797a11be4383a4ac5deb8f0a92895b333fd55d' // Your MailerSend API key
       });
 
       const sentFrom = new window.Sender("orders@delicure.com", "Deli Cure Orders");
@@ -91,7 +91,7 @@ export async function sendOrderEmail(orderData) {
       const emailParams = new window.EmailParams()
         .setFrom(sentFrom)
         .setTo(recipients)
-        .setReplyTo(sentFrom)
+        .setReplyTo("nikola_998@yahoo.com")
         .setSubject("Potvrda porudžbine - Deli Cure")
         .setHtml(htmlContent)
         .setText(`Potvrda porudžbine - Deli Cure\n\nPoštovani/a ${orderData.customer.ime} ${orderData.customer.prezime},\n\nHvala vam na vašoj porudžbini. Potvrdili smo primitak vaše porudžbine i obradićemo je u najkraćem mogućem roku.\n\nDetalji porudžbine:\n${itemsHtml.replace(/<[^>]*>/g, '')}\n\nUkupno: ${totalAmount.toLocaleString()} RSD\n\nDetalji dostave:\n- Adresa: ${orderData.customer.adresa}\n- Telefon: ${orderData.customer.telefon}\n- Datum i vreme dostave: ${orderData.delivery.datetime}\n\nS poštovanjem,\nTim Deli Cure`);
