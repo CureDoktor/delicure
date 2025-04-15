@@ -5,7 +5,7 @@ async function sendEmail() {
     
     // Prepare the email data
     const emailData = {
-      to: "nikola_998@yahoo.com",
+      to: "nikolacurcic190@gmail.com",
       subject: "This is a Subject",
       html: "<strong>This is the HTML content</strong>",
       text: "This is the text content"
