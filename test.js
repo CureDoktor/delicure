@@ -11,7 +11,7 @@ async function sendEmail() {
       text: "This is the text content"
     };
     
-    console.log("Sending request to API...");
+    console.log("Sending request to API with data:", emailData);
     
     // Send the request to our API
     const response = await fetch('/api/send-email', {
@@ -22,14 +22,16 @@ async function sendEmail() {
       body: JSON.stringify(emailData)
     });
     
+    // Get the response data
+    const responseData = await response.json();
+    console.log("API response:", responseData);
+    
     // Check if the request was successful
     if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.error || 'Failed to send email');
+      throw new Error(responseData.error || 'Failed to send email');
     }
     
-    const result = await response.json();
-    console.log("Email sent successfully!", result);
+    console.log("Email sent successfully!", responseData);
     alert("Email sent successfully!");
   } catch (error) {
     console.error("Error sending email:", error);
