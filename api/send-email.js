@@ -21,7 +21,7 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'MailerSend API key is not configured' });
     }
     
-    console.log("Initializing MailerSend client");
+    console.log("API Key available:", process.env.MAILERSEND_API_KEY.substring(0, 10) + "...");
     
     // Try a simpler approach using fetch directly to the MailerSend API
     console.log("Using direct API call approach");
@@ -53,6 +53,15 @@ export default async function handler(req, res) {
     console.log("MailerSend API response:", responseData);
     
     if (!response.ok) {
+      // Check for domain verification error
+      if (responseData.message && responseData.message.includes("must be one of the verified domains")) {
+        return res.status(400).json({ 
+          error: 'Domain verification required', 
+          details: 'The recipient domain must be verified in your MailerSend account. Please verify the domain or use a different email address.',
+          mailerSendError: responseData
+        });
+      }
+      
       throw new Error(`MailerSend API error: ${JSON.stringify(responseData)}`);
     }
     

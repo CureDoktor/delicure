@@ -5,7 +5,7 @@ async function sendEmail() {
     
     // Prepare the email data
     const emailData = {
-      to: "nikolacurcic190@gmail.com",
+      to: "nikola_998@yahoo.com", // Change this to a verified domain email
       subject: "This is a Subject",
       html: "<strong>This is the HTML content</strong>",
       text: "This is the text content"
@@ -28,6 +28,12 @@ async function sendEmail() {
     
     // Check if the request was successful
     if (!response.ok) {
+      // Check for domain verification error
+      if (responseData.error === 'Domain verification required') {
+        alert("Email service error: " + responseData.details);
+        return;
+      }
+      
       throw new Error(responseData.error || 'Failed to send email');
     }
     
