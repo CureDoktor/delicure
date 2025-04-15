@@ -1,17 +1,23 @@
 // Using MailerSend from CDN
 async function sendEmail() {
   try {
-    const mailerSend = new MailerSend({
+    // Check if the library is loaded
+    if (typeof window.MailerSend === 'undefined') {
+      console.error("MailerSend library not loaded");
+      return;
+    }
+
+    const mailerSend = new window.MailerSend({
       apiKey: "mlsn.7c3aab933e4b719f008f2bb425797a11be4383a4ac5deb8f0a92895b333fd55d",
     });
 
-    const sentFrom = new Sender("orders@delicure.com", "Deli Cure Orders");
+    const sentFrom = new window.Sender("orders@delicure.com", "Deli Cure Orders");
 
     const recipients = [
-      new Recipient("nikola_998@yahoo.com", "Nikola")
+      new window.Recipient("nikola_998@yahoo.com", "Nikola")
     ];
 
-    const emailParams = new EmailParams()
+    const emailParams = new window.EmailParams()
       .setFrom(sentFrom)
       .setTo(recipients)
       .setReplyTo(sentFrom)
