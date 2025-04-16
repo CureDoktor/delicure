@@ -1,12 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="test.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Porudžbine - Deli Cure</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .order-items {
+      margin: 20px 0;
+    }
+    .item-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .item-row input {
+      width: calc(33% - 10px);
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .company-info {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+  <!-- EmailJS SDK - Updated to latest version -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-    <button onclick="sendEmail()">Send Email</button>
+  <h1>Test Porudžbine</h1>
+
+  <form id="order-form">
+    <!-- Customer Information -->
+    <div class="form-group">
+      <h2>Informacije o kupcu</h2>
+      <label for="customerName">Ime i prezime</label>
+      <input type="text" id="customerName" name="customerName" required>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="user_email" required>
+      
+      <label for="phone">Telefon</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+
+    <!-- Order Details -->
+    <div class="form-group">
+      <h2>Detalji porudžbine</h2>
+      <label for="orderNumber">Broj porudžbine</label>
+      <input type="text" id="orderNumber" name="orderNumber" readonly>
+      
+      <label for="orderDate">Datum porudžbine</label>
+      <input type="text" id="orderDate" name="orderDate" readonly>
+    </div>
+
+    <!-- Order Items -->
+    <div class="form-group">
+      <h2>Stavke porudžbine</h2>
+      <div class="order-items" id="orderItems">
+        <div class="item-row">
+          <input type="text" name="itemName[]" placeholder="Naziv proizvoda" required>
+          <input type="number" name="itemQuantity[]" placeholder="Količina" required>
+          <input type="number" name="itemPrice[]" placeholder="Cena" required>
+        </div>
+      </div>
+      <button type="button" onclick="addItemRow()">Dodaj još jedan proizvod</button>
+    </div>
+
+    <!-- Delivery Information -->
+    <div class="form-group">
+      <h2>Informacije o dostavi</h2>
+      <label for="deliveryAddress">Adresa za dostavu</label>
+      <textarea id="deliveryAddress" name="deliveryAddress" required></textarea>
+      
+      <label for="deliveryDate">Datum dostave</label>
+      <input type="datetime-local" id="deliveryDate" name="deliveryDate" required>
+    </div>
+
+    <!-- Company Information -->
+    <div class="company-info">
+      <h2>Informacije o kompaniji</h2>
+      <input type="hidden" name="companyName" value="Deli Cure">
+      <input type="hidden" name="companyEmail" value="info@delicure.rs">
+      <input type="hidden" name="companyPhone" value="+381 60 123 4567">
+      <input type="hidden" name="companyAddress" value="Ulica Primer 123, 11000 Beograd, Srbija">
+      <input type="hidden" name="currentYear" value="2024">
+    </div>
+
+    <button type="submit">Pošalji porudžbinu</button>
+  </form>
+
+  <script>
+    // Initialize EmailJS
+    (function() {
+      emailjs.init("gHtrr16WdHkFod2UC");
+      console.log("EmailJS initialized");
+    })();
+
+    function addItemRow() {
+      const orderItems = document.getElementById('orderItems');
+      const newRow = document.createElement('div');
+      newRow.className = 'item-row';
+      newRow.innerHTML = `
+        <input type="text" name="itemName[]" placeholder="Naziv proizvoda" required>
+        <input type="number" name="itemQuantity[]" placeholder="Količina" required>
+        <input type="number" name="itemPrice[]" placeholder="Cena" required>
+      `;
+      orderItems.appendChild(newRow);
+    }
+
+    // Set current date and time for order date
+    document.getElementById('orderDate').value = new Date().toLocaleString('sr-RS');
+    
+    // Generate order number
+    document.getElementById('orderNumber').value = 'ORD-' + new Date().getTime();
+
+    const form = document.getElementById('order-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Calculate order total
+      const quantities = [...document.getElementsByName('itemQuantity[]')].map(input => Number(input.value));
+      const prices = [...document.getElementsByName('itemPrice[]')].map(input => Number(input.value));
+      const total = quantities.reduce((sum, qty, index) => sum + (qty * prices[index]), 0);
+
+      // Get item names
+      const itemNames = [...document.getElementsByName('itemName[]')].map(input => input.value);
+
+      // Create order items array for template
+      const orderItems = itemNames.map((name, index) => ({
+        name: name,
+        units: quantities[index],
+        price: prices[index],
+        image_url: "https://delicure.rs/images/products/" + name.toLowerCase().replace(/\s+/g, '-') + ".jpg"
+      }));
+
+      // Calculate costs
+      const subtotal = quantities.reduce((sum, qty, index) => sum + (qty * prices[index]), 0);
+      const shipping = 500; // Fixed shipping cost in RSD
+      const tax = subtotal * 0.2; // 20% tax
+      const orderTotal = subtotal + shipping + tax;
+
+      // Format delivery date and time
+      const deliveryDateTime = new Date(document.getElementById('deliveryDate').value);
+      const deliveryDate = deliveryDateTime.toLocaleDateString('sr-RS');
+      const deliveryTime = deliveryDateTime.toLocaleTimeString('sr-RS', { hour: '2-digit', minute: '2-digit' });
+
+      // Prepare template parameters
+      const templateParams = {
+        order_id: document.getElementById('orderNumber').value,
+        orders: orderItems,
+        cost: {
+          shipping: shipping,
+          tax: tax,
+          total: orderTotal
+        },
+        email: document.getElementById('email').value,
+        delivery_date: deliveryDate,
+        delivery_time: deliveryTime,
+        delivery_address: document.getElementById('deliveryAddress').value
+      };
+
+      // Log each parameter individually for debugging
+      console.log("Template Parameters:");
+      Object.entries(templateParams).forEach(([key, value]) => {
+        console.log(`${key}:`, value);
+      });
+
+      // Send email using EmailJS
+      emailjs.send("service_yw39mnu", "template_lrfyo28", templateParams)
+        .then((response) => {
+          console.log("Email sent successfully:", response);
+          alert("Porudžbina je uspešno poslata!");
+          form.reset();
+        }, (error) => {
+          console.error("Email error details:", error);
+          console.error("Failed parameters:", templateParams);
+          alert("Greška pri slanju: " + JSON.stringify(error));
+        });
+    });
+  </script>
 </body>
 </html>

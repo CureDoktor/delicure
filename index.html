@@ -26,6 +26,15 @@
     />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      // Initialize EmailJS
+      (function() {
+        emailjs.init("gHtrr16WdHkFod2UC");
+        console.log("EmailJS initialized");
+      })();
+    </script>
+    <script type="module" src="email-service.js"></script>
   </head>
   <body id="pocetna">
     <navbar>
@@ -856,18 +865,82 @@
                        parseInt(formData.get('srednja_quantity')) * 9000 + 
                        parseInt(formData.get('velika_quantity')) * 15000
             };
-            
-            // Process the order using our email service
-            import('./email-service.js').then(module => {
-              module.processOrder(orderData)
-                .then(result => {
-                  if (result.success) {
-                    // Show success message
-                    if (result.simulated) {
-                      alert('Vaša porudžbina je uspešno primljena. (Simulacija slanja emaila)');
-                    } else {
-                      alert('Vaša porudžbina je uspešno primljena. Kontaktiraćemo vas uskoro.');
-                    }
+
+            // Format delivery date and time
+            const deliveryDateTime = new Date(formData.get('delivery_datetime'));
+            const deliveryDate = deliveryDateTime.toLocaleDateString('sr-RS', {
+              day: '2-digit',
+              month: '2-digit',
+              year: 'numeric'
+            });
+            const deliveryTime = deliveryDateTime.toLocaleTimeString('sr-RS', {
+              hour: '2-digit',
+              minute: '2-digit'
+            });
+
+            // Create order items array for template
+            const orderItems = [];
+            if (orderData.items.mala1.quantity > 0) {
+                orderItems.push({
+                    name: "Mala kutija 1",
+                    units: orderData.items.mala1.quantity,
+                    price: 6000,
+                    image_url: "https://delicure.rs/images/porudzbina/mala_1.jpg"
+                });
+            }
+            if (orderData.items.mala2.quantity > 0) {
+                orderItems.push({
+                    name: "Mala kutija 2",
+                    units: orderData.items.mala2.quantity,
+                    price: 6000,
+                    image_url: "https://delicure.rs/images/porudzbina/mala_2.jpg"
+                });
+            }
+            if (orderData.items.srednja.quantity > 0) {
+                orderItems.push({
+                    name: "Srednja kutija",
+                    units: orderData.items.srednja.quantity,
+                    price: 9000,
+                    image_url: "https://delicure.rs/images/porudzbina/srednja.jpg"
+                });
+            }
+            if (orderData.items.velika.quantity > 0) {
+                orderItems.push({
+                    name: "Velika kutija",
+                    units: orderData.items.velika.quantity,
+                    price: 15000,
+                    image_url: "https://delicure.rs/images/porudzbina/velika.jpg"
+                });
+            }
+
+            // Calculate costs
+            const shipping = 500; // Fixed shipping cost in RSD
+            const tax = orderData.total * 0.2; // 20% tax
+            const orderTotal = orderData.total + shipping + tax;
+
+            // Prepare template parameters
+            const templateParams = {
+                order_id: 'ORD-' + new Date().getTime(),
+                orders: orderItems,
+                cost: {
+                    shipping: shipping,
+                    tax: tax,
+                    total: orderTotal
+                },
+                ime_prezime: orderData.customer.ime + ' ' + orderData.customer.prezime,
+                email: orderData.customer.email,
+                delivery_time: orderData.delivery.datetime,
+                delivery_address: orderData.customer.adresa,
+                phone_number: orderData.customer.telefon
+            };
+
+            console.log("Template parameters:", templateParams);
+
+            // Send email using EmailJS
+            emailjs.send("service_yw39mnu", "template_lrfyo28", templateParams)
+                .then((response) => {
+                    console.log("Email sent successfully:", response);
+                    alert("Vaša porudžbina je uspešno primljena. Kontaktiraćemo vas uskoro.");
                     
                     // Reset form
                     this.reset();
@@ -880,22 +953,15 @@
                     
                     // Update totals
                     updateCheckoutSummary();
-                  } else {
-                    // Show error message
-                    alert('Došlo je do greške prilikom slanja porudžbine. Molimo pokušajte ponovo.');
-                    console.error('Order processing error:', result.error);
-                  }
-                })
-                .catch(error => {
-                  console.error('Error:', error);
-                  alert('Došlo je do greške prilikom slanja porudžbine. Molimo pokušajte ponovo.');
+                }, (error) => {
+                    console.error("Email error:", error);
+                    alert("Došlo je do greške prilikom slanja porudžbine. Molimo pokušajte ponovo.");
                 })
                 .finally(() => {
-                  // Reset button state
-                  submitBtn.innerHTML = originalText;
-                  submitBtn.disabled = false;
+                    // Reset button state
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
                 });
-            });
           });
         }
       });
