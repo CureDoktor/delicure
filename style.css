@@ -1336,6 +1336,10 @@ img{
     flex-direction: column;
     text-align: center;
   }
+
+  .sastojak.reversed {
+    flex-direction: column-reverse;
+  }
   
   .sastojak img {
     max-width: 100%;
@@ -1489,3 +1493,49 @@ img{
     transform: translateY(0);
   }
 }
+@media (max-width: 768px) {
+  .header .hero-header {
+    font-size: 2rem;
+  }
+
+  .o_nama {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  .o_nama h1 {
+    font-size: 2rem;
+    padding-top: 0px;
+  }
+
+  .o_nama p {
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+
+  .sastojci::before {
+    display: none;
+  }
+  .sastojci h1{
+    padding-top: 0px;
+  }
+  
+  .sastojak {
+    height: unset;
+  }
+
+  .sastojak img{
+    width: 100%;
+    height: unset;
+  }
+
+  .porucivanje {
+    padding-top: 0px;
+  }
+
+  .porucivanje h1 {
+    padding-top: 0px;
+  }
+}
+
