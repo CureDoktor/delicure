@@ -647,10 +647,10 @@
         
         // Add animation classes to elements when they come into view
         const animateOnScroll = function() {
-          const elements = document.querySelectorAll('.o_nama p, .sastojci p, h1, .line, .image-holder-section img');
+          const elements = document.querySelectorAll('.o_nama p, .sastojci p, .section-heading, .line, .image-holder-section img');
           
           elements.forEach(element => {
-            if (element) {
+            if (element && element.getBoundingClientRect) {
               const elementPosition = element.getBoundingClientRect().top;
               const windowHeight = window.innerHeight;
               
@@ -664,7 +664,7 @@
           if (!hasVisited) {
             const sastojakElements = document.querySelectorAll('.sastojak');
             sastojakElements.forEach((element, index) => {
-              if (element) {
+              if (element && element.getBoundingClientRect) {
                 const elementPosition = element.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
                 
