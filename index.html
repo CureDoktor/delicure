@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -31,7 +31,6 @@
       // Initialize EmailJS
       (function() {
         emailjs.init("Y_2059rb4Hn7k4EZR");
-        console.log("EmailJS initialized");
       })();
     </script>
     <script type="module" src="email-service.js"></script>
@@ -1010,9 +1009,12 @@
           <div class="modal-body">
             <img src="images/porudzbina/mala_1.jpg" alt="Mala kutija 1" class="img-fluid mb-3">
             <p>Detalji o Maloj kutiji 1:</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-            <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-          </div>
+            <br/>
+           <ul>
+            <li>Namenjena za dve osobe.</li>
+            <li>Veličina 22*22cm.</li>
+            <li>U sebi sadrži 70g suvog vrata, 80g svinjske pršute, 140g gorgonzole, 140g parmezana, i pored toga krekere suve kajsije, pistace, orahe, grožđe.</li>
+           </ul> </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
           </div>
@@ -1031,9 +1033,12 @@
           <div class="modal-body">
             <img src="images/porudzbina/mala_2.jpg" alt="Mala kutija 2" class="img-fluid mb-3">
             <p>Detalji o Maloj kutiji 2:</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-            <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-          </div>
+            <br/>
+            <ul>
+              <li>Namenjena za dve osobe.</li>
+              <li>Veličina 22*22cm.</li>
+              <li>U sebi sadrži 70g suvog vrata, 80g svinjske pršute, 140g gorgonzole, 140g , i pored toga krekere </li>
+             </ul></div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvori</button>
           </div>
@@ -1082,5 +1087,24 @@
         </div>
       </div>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Get all nav links
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        // Add click event listener to each nav link
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            // Check if navbar is expanded (mobile menu is open)
+            if (navbarCollapse.classList.contains('show')) {
+              // Close the mobile menu
+              navbarToggler.click();
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

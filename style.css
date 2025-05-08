@@ -332,7 +332,7 @@ ul li a {
 
 .header .container {
   height: 100%;
-  font-family: "Tangerine", serif;
+  font-family: "Dancing Script", cursive;
 }
 
 .header .container::before {
@@ -349,11 +349,12 @@ ul li a {
 }
 
 .header .hero-header {
-  font-size: 70px;
+  font-size: 65px;
   color: black;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   padding: 30px 0px;
+  font-weight: 100;
 }
 
 .line {
@@ -384,7 +385,7 @@ ul li a {
 
 h1 {
   text-align: center;
-  font-family: "Tangerine", serif;
+  font-family: "Dancing Script", cursive;
   padding-top: 80px;
   font-size: 80px;
   color: black;
@@ -688,7 +689,7 @@ img{
 }
 
 .customer-info h3 {
-  font-family: "Tangerine", serif;
+  font-family: "Dancing Script", cursive;
   font-size: 35px;
   color: #000;
   margin-bottom: 20px;
@@ -762,7 +763,7 @@ img{
 }
 
 .delivery-time h3 {
-  font-family: "Tangerine", serif;
+  font-family: "Dancing Script", cursive;
   font-size: 35px;
   color: #000;
   margin-bottom: 20px;
@@ -864,7 +865,7 @@ img{
 }
 
 .checkout-summary h3 {
-  font-family: "Tangerine", serif;
+  font-family: "Dancing Script", cursive;
   font-size: 30px;
   color: #000;
   margin-bottom: 15px;
@@ -1495,7 +1496,7 @@ img{
 }
 @media (max-width: 768px) {
   .header .hero-header {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .o_nama {
