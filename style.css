@@ -383,21 +383,20 @@ ul li a {
   width: 100%;
 }
 
-h1 {
+h2 {
   text-align: center;
   font-family: "Dancing Script", cursive;
   padding-top: 80px;
-  font-size: 80px;
+  font-size: 60px;
   color: black;
   transition: all 0.6s ease;
-  opacity: 0;
   transform: translateY(20px);
 }
-h1:hover {
-  color: #ffc998;
+h2:hover {
+  color: #000000;
 }
 
-h1.animated {
+h2.animated {
   opacity: 1;
   transform: translateY(0);
 }
@@ -890,7 +889,7 @@ img{
 }
 
 .order-item:hover {
-  background-color: rgba(255, 201, 152, 0.1);
+  
   transform: translateY(-2px);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
 }
@@ -957,7 +956,7 @@ img{
   font-weight: 700;
   color: #e67e22;
   font-size: 15px;
-  background-color: rgba(255, 201, 152, 0.1);
+  
   padding: 3px 8px;
   border-radius: 6px;
   min-width: 70px;
@@ -986,7 +985,7 @@ img{
   color: #e67e22 !important;
   font-size: 20px !important;
   font-weight: 700 !important;
-  background-color: rgba(255, 201, 152, 0.1);
+  
   padding: 5px 15px;
   border-radius: 8px;
 }
@@ -1015,7 +1014,7 @@ img{
 .product-price {
   margin-top: 5px;
   padding: 5px 10px;
-  background-color: rgba(255, 201, 152, 0.1);
+  
   border-radius: 15px;
   display: inline-block;
 }
@@ -1030,7 +1029,7 @@ img{
 .fixed-price {
   margin: 10px 0;
   padding: 5px 10px;
-  background-color: rgba(255, 201, 152, 0.2);
+  
   border-radius: 15px;
   display: flex;
   flex-direction: column;

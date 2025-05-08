@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Deli Cure - Luksuzne charcuterie kutije sa najfinijim sirevima i suhomesnatim delikatesama. Savršen izbor za gurmansko uživanje i posebne prilike." />
     <title>Deli Cure</title>
     <link rel="icon" type="image/x-icon" href="images/Delicure.ico" />
     <link
@@ -38,423 +39,421 @@
   </head>
   <body id="pocetna">
     <navbar>
-      <nav class="navbar sticky-top navbar-expand-lg st navbar-light">
+      <nav class="navbar sticky-top navbar-expand-lg st navbar-light" role="navigation" aria-label="Main navigation">
         <div class="container d-flex justify-between py-3 py-md-0">
-          
-            <img src="images/Logo.png" alt="logo" class="logo" />
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarTogglerDemo02"
-              aria-controls="navbarTogglerDemo02"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+          <a href="#pocetna" aria-label="Deli Cure Home">
+            <img src="images/Logo.png" alt="Deli Cure Logo" class="logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
           
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="#pocetna">Početna</a>
+                <a class="nav-link" href="#pocetna" aria-label="Go to home section">Početna</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#o_nama">O nama</a>
+                <a class="nav-link" href="#about-heading" aria-label="Go to about us section">O nama</a>
               </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#galerija">Galerija</a>
-              </li> -->
               <li class="nav-item">
-                <a class="nav-link" href="#sastojci">Sastojci</a>
+                <a class="nav-link" href="#ingredients-heading" aria-label="Go to ingredients section">Sastojci</a>
               </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#ponuda">Ponuda</a>
-              </li> -->
               <li class="nav-item">
-                <a class="nav-link" href="#porucivanje">Porucivanje</a>
+                <a class="nav-link" href="#ordering-heading" aria-label="Go to ordering section">Porucivanje</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </navbar>
-    <header class="header">
+    <header class="header" role="banner">
       <div class="container d-flex justify-content-center align-items-center">
         <h1 class="hero-header">
           U svakom zalogaju krije se svet bogatih aroma i luksuznih sastojaka.
         </h1>
       </div>
     </header>
-    <section class="o_nama">
-      <h1 id="o_nama">O nama</h1>
-      <div class="line"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p>
-              Osnovani 2025. godine, s misijom da spojimo vrhunske ukuse i vrhunski
-              doživljaj. Naši charcuterie box specijaliteti pažljivo su kreirani od
-              najfinijih sireva, suhomesnatih delikatesa i pomno biranih dodataka iz
-              cele Evrope. Svaka kutija je priča o harmoniji ukusa, savršena za
-              posebne trenutke, poklone ili jednostavno uživanje.
-              <br>
-              <br>
-              Naša kutija je savršen izbor za ljubitelje gurmanskih zalogaja, idealna za uživanje uz vaše omiljeno vino. Poručite vašu kutiju sada i prepustite se kulinarskom putovanju.
-              <br>
-              <br>
-              Dobrodošli u svet gde se strast prema hrani pretvara u umetnost.
-            </p>
-         
-          </div>
-          <div class="col-md-6">
-            <div class="image-holder-section">
-              <div>
-                <img src="images/o_nama/o_nama_2.jpg" class="making_2" alt="Proces izrade 2" />
-              </div>
-              <div>
-                <img src="images/o_nama/o_nama_1.jpg" class="making_1" alt="Proces izrade 1" />
-              </div>
+    <main role="main">
+      <section class="o_nama" aria-labelledby="about-heading">
+        <h2 id="about-heading" class="section-heading">O nama</h2>
+        <div class="line" aria-hidden="true"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p>
+                Osnovani 2025. godine, s misijom da spojimo vrhunske ukuse i vrhunski
+                doživljaj. Naši charcuterie box specijaliteti pažljivo su kreirani od
+                najfinijih sireva, suhomesnatih delikatesa i pomno biranih dodataka iz
+                cele Evrope. Svaka kutija je priča o harmoniji ukusa, savršena za
+                posebne trenutke, poklone ili jednostavno uživanje.
+                <br>
+                <br>
+                Naša kutija je savršen izbor za ljubitelje gurmanskih zalogaja, idealna za uživanje uz vaše omiljeno vino. Poručite vašu kutiju sada i prepustite se kulinarskom putovanju.
+                <br>
+                <br>
+                Dobrodošli u svet gde se strast prema hrani pretvara u umetnost.
+              </p>
+           
             </div>
+            <div class="col-md-6">
+              <div class="image-holder-section">
+                <div>
+                  <img src="images/o_nama/o_nama_2.jpg" class="making_2" alt="Proces izrade 2" />
+                </div>
+                <div>
+                  <img src="images/o_nama/o_nama_1.jpg" class="making_1" alt="Proces izrade 1" />
+                </div>
+              </div>
 
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="galerija">
-      <!-- <h1 id="galerija">Galerija</h1> -->
-      <!-- <div class="line"></div> -->
-      <div class="container">
-        <!-- Swiper -->
-        <div class="swiper mySwiper">
-          <!-- <div class="swiper-wrapper gallery">
-            <div class="swiper-slide">
-              <img src="images/slider_1.jpg" onclick="openModal(this)" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/slider_2.jpg" onclick="openModal(this)" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/slider_3.jpg" onclick="openModal(this)" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/slider_4.jpg" onclick="openModal(this)" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/slider_5.jpg" onclick="openModal(this)" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/slider_6.jpg" onclick="openModal(this)" />
-            </div>
-          </div> -->
-          <!-- <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div> -->
-        </div>
-        <!-- <div class="swiper mySwiper2">
-          <div class="swiper-wrapper gallery">
-            <div class="swiper-slide">
-              <img src="images/slider_7.jpg" onclick="openModal(this)" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/slider_8.jpg" onclick="openModal(this)" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/slider_9.jpg" onclick="openModal(this)" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/slider_10.jpg" onclick="openModal(this)" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/slider_11.jpg" onclick="openModal(this)" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/slider_12.jpg" onclick="openModal(this)" />
-            </div>
-          </div> -->
-          <!-- <div class="swiper-button-next"></div>
+      </section>
+      <section class="galerija">
+        <!-- <h1 id="galerija">Galerija</h1> -->
+        <!-- <div class="line"></div> -->
+        <div class="container">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <!-- <div class="swiper-wrapper gallery">
+              <div class="swiper-slide">
+                <img src="images/slider_1.jpg" onclick="openModal(this)" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/slider_2.jpg" onclick="openModal(this)" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/slider_3.jpg" onclick="openModal(this)" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/slider_4.jpg" onclick="openModal(this)" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/slider_5.jpg" onclick="openModal(this)" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/slider_6.jpg" onclick="openModal(this)" />
+              </div>
+            </div> -->
+            <!-- <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div> -->
+          </div>
+          <!-- <div class="swiper mySwiper2">
+            <div class="swiper-wrapper gallery">
+              <div class="swiper-slide">
+                <img src="images/slider_7.jpg" onclick="openModal(this)" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/slider_8.jpg" onclick="openModal(this)" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/slider_9.jpg" onclick="openModal(this)" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/slider_10.jpg" onclick="openModal(this)" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/slider_11.jpg" onclick="openModal(this)" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/slider_12.jpg" onclick="openModal(this)" />
+              </div>
+            </div> -->
+            <!-- <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div> -->
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="sastojci">
-      <h1 id="sastojci">Sastojci</h1>
-      <div class="line"></div>
-      <div class="lista">
-        <div class="row">
-        <div class="col-md-6 my-3">
-        <div class="sastojak reversed">
-          <p>
-            Bri ima glatku, kremastu teksturu i blag, masni ukus sa blagim
-            notama orašastih plodova i gljiva. Njegova narandžasta kora dodaje
-            dodatnu dimenziju teksturi. Saće kao savrsen dodatak bri siru na kojem se i nalazi predstavlja savršenu kombinaciju punog ukusa i slatkoće.
-            Suva španska kobasica je napravljena od bogatog ukusnog iberijskog mesa i prirodnom belom korom koja čuva aromu i daje zemljastu notu, idealna  je za fine zalogaje uz sir i vino.
-         
-          </p>
-          <img src="images/sastojci/bri-sace-kobasica.jpg" alt="Bri, saće i kobasica" />
-        </div>
-        </div>
-        <div class="col-md-6 my-3">
-        <div class="sastojak">
-          <img src="images/sastojci/gauda-grozdje-suvivrat.jpg" alt="Gauda, grožđe i suvi vrat" />
-          <p>
-          
-            Gauda kao jedan od najpoznatijih holandskih sireva, a naša nemačka
-            verzija donosi savršen balans slatkoće i pikantnosti. Suvi vrat iz
-            Crne Gore je autentična delikatesa napravljena od pažljivo odabranog
-            svinjskog mesa. Proizvodi se tradicionalnim metodama sušenja i
-            začinjavanja.Sveže grožđe donosi osvežavajuću slatkoću i sočnost.
-            Idealan je partner za sireve i orašaste plodove, stvarajući savršen
-            balans ukusa.
-          </p>
-        </div>
-        </div>
-        <div class="col-md-6 my-3">
-        <div class="sastojak reversed">
-          <p>
-            
-            Crna cokolada obogacuje ukus nasoj kutiji svojim intenzitetom, čak sa 75% kakaa.
-            Uživajte u slatkom i prirodnom ukusu suvih kajsija koje dodaju savršen kontrast slanim i pikantnim ukusima ostalih delikatesa u našoj kutiji.
-          
-           </p>
-          <img src="images/sastojci/kajsija-cokolada.jpg" alt="Kajsija i čokolada" />
-        </div>
-        </div>
-        <div class="col-md-6 my-3">
-        <div class="sastojak">
-          <img src="images/sastojci/masline-krekeri-prsuta.jpg" alt="Masline, krekeri i pršuta" />
-          <p>
-            Masline dodaju suptilnu slanost i bogatstvo ukusa. Odabrane su zbog
-            svoje kvalitete i savršeno se uklapaju sa sirevima i mesnim
-            delicijama. Naši hrskavi krekeri su idealna baza za sireve, meso i
-            med. Njihova neutralna i blago slana aroma savršeno dopunjuje bogate
-            ukuse ostalih sastojaka. Goveđa pršuta – suptilna snaga ukusa, dimljena tradicijom i sečena na zalogaje koji govore više od reči.
-          </p>
-            </div>
-        </div>
-        <div class="col-md-6 my-3">
-        <div class="sastojak reversed">
-          <p>
-             
-            Domaći med sa liofilizovanim vocem u našoj kutiji su to limun i borovnica dodaju prirodnu slatkoću i autentičan ukus vašem obroku. Naša kutija sadrži pažljivo odabrane orašaste
-            plodove kao što su bademi, orasi, lešnici i pistaci. Ovi hrskavi i
-            hranljivi plodovi dodaju dodatni sloj teksture i ukusa vašem
-            gurmanskom iskustvu. Naš kremasti plavi sir iz Danske ima
-            jedinstven, oštar ukus i glatku teksturu.
-            </p>
-          <img src="images/sastojci/med-orasasti-gorgonzola.jpg" alt="Med, orašasti plodovi i gorgonzola" />
-        </div>
-        </div>
-        <div class="col-md-6 my-3">
-        <div class="sastojak">
-          <img src="images/sastojci/parmezan-prsuta.jpg" alt="Parmezan i pršuta" />
-          <p>
-            Pršuta nam dolazi pravo iz  Slovenije i pravi je užitak za ljubitelje finih ukusa. Slovenačka pršuta je tanko sečena, sa boga
-            m, dimljenim ukusom koji savršeno dopunjuje svaki obrok.
-            Grana Padano je sir iz porodice parmezana koji ima zlatno žutu boju, zrnastu teksturu i bogat, pun ukus sa notama oraha i karamele.
-    
-          </p>
-        </div>
-     
-      </div>
-    </section>
-    <!-- <section>
-      <h1 id="ponuda">Ponuda</h1>
-      <div class="line"></div>
-    </section> -->
-    <section class="porucivanje">
-      <h1 id="porucivanje">Poručivanje</h1>
-      <div class="line"></div>
-      <div class="container pt-5">
-        <form id="orderForm" action="save-order.php" method="POST">
+      </section>
+      <section class="sastojci" aria-labelledby="ingredients-heading">
+        <h2 id="ingredients-heading" class="section-heading">Sastojci</h2>
+        <div class="line" aria-hidden="true"></div>
+        <div class="lista">
           <div class="row">
-            <div class="col-md-3">
-              <div class="porudzbina">
-                <img src="images/porudzbina/mala_1.jpg" alt="">
-                <p>Box No.1 - mini</p>
-                <button type="button" class="btn btn-sm btn-outline-secondary details-btn" data-bs-toggle="modal" data-bs-target="#mala1Modal">Detalji</button>
-                <div class="fixed-price">
-                  <span class="price-label">Cena:</span>
-                  <span class="price-value">6.000 RSD</span>
-                </div>
-                <div class="quantity-controls">
-                  <button type="button" class="quantity-btn minus" onclick="updateQuantity('mala1', -1)">-</button>
-                  <span class="quantity" id="mala1">0</span>
-                  <button type="button" class="quantity-btn plus" onclick="updateQuantity('mala1', 1)">+</button>
-                </div>
-                <div class="product-price">
-                  <span class="price-amount" id="mala1_price">Ukupno: 0 RSD</span>
-                </div>
-                <input type="hidden" name="mala1_quantity" value="0">
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="porudzbina">
-                <img src="images/porudzbina/mala_2.jpg" alt="">
-                <p>Box No.2 - mini</p>
-                <button type="button" class="btn btn-sm btn-outline-secondary details-btn" data-bs-toggle="modal" data-bs-target="#mala2Modal">Detalji</button>
-                <div class="fixed-price">
-                  <span class="price-label">Cena:</span>
-                  <span class="price-value">6.000 RSD</span>
-                </div>
-                <div class="quantity-controls">
-                  <button type="button" class="quantity-btn minus" onclick="updateQuantity('mala2', -1)">-</button>
-                  <span class="quantity" id="mala2">0</span>
-                  <button type="button" class="quantity-btn plus" onclick="updateQuantity('mala2', 1)">+</button>
-                </div>
-                <div class="product-price">
-                  <span class="price-amount" id="mala2_price">Ukupno: 0 RSD</span>
-                </div>
-                <input type="hidden" name="mala2_quantity" value="0">
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="porudzbina">
-                <img src="images/porudzbina/srednja.jpg" alt="">
-                <p>Box No.3 - medium</p>
-                <button type="button" class="btn btn-sm btn-outline-secondary details-btn" data-bs-toggle="modal" data-bs-target="#srednjaModal">Detalji</button>
-                <div class="fixed-price">
-                  <span class="price-label">Cena:</span>
-                  <span class="price-value">9.000 RSD</span>
-                </div>
-                <div class="quantity-controls">
-                  <button type="button" class="quantity-btn minus" onclick="updateQuantity('srednja', -1)">-</button>
-                  <span class="quantity" id="srednja">0</span>
-                  <button type="button" class="quantity-btn plus" onclick="updateQuantity('srednja', 1)">+</button>
-                </div>
-                <div class="product-price">
-                  <span class="price-amount" id="srednja_price">Ukupno: 0 RSD</span>
-                </div>
-                <input type="hidden" name="srednja_quantity" value="0">
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="porudzbina">
-                <img src="images/porudzbina/velika.jpg" alt="">
-                <p>Box No.4 - large</p>
-                <button type="button" class="btn btn-sm btn-outline-secondary details-btn" data-bs-toggle="modal" data-bs-target="#velikaModal">Detalji</button>
-                <div class="fixed-price">
-                  <span class="price-label">Cena:</span>
-                  <span class="price-value">15.000 RSD</span>
-                </div>
-                <div class="quantity-controls">
-                  <button type="button" class="quantity-btn minus" onclick="updateQuantity('velika', -1)">-</button>
-                  <span class="quantity" id="velika">0</span>
-                  <button type="button" class="quantity-btn plus" onclick="updateQuantity('velika', 1)">+</button>
-                </div>
-                <div class="product-price">
-                  <span class="price-amount" id="velika_price">Ukupno: 0 RSD</span>
-                </div>
-                <input type="hidden" name="velika_quantity" value="0">
-              </div>
-            </div>
+          <div class="col-md-6 my-3">
+          <div class="sastojak reversed">
+            <p>
+              Bri ima glatku, kremastu teksturu i blag, masni ukus sa blagim
+              notama orašastih plodova i gljiva. Njegova narandžasta kora dodaje
+              dodatnu dimenziju teksturi. Saće kao savrsen dodatak bri siru na kojem se i nalazi predstavlja savršenu kombinaciju punog ukusa i slatkoće.
+              Suva španska kobasica je napravljena od bogatog ukusnog iberijskog mesa i prirodnom belom korom koja čuva aromu i daje zemljastu notu, idealna  je za fine zalogaje uz sir i vino.
+           
+            </p>
+            <img src="images/sastojci/bri-sace-kobasica.jpg" alt="Bri, saće i kobasica" />
           </div>
-
-          <div class="delivery-time mt-5">
-            <h3 class="text-center mb-4">Vreme dostave</h3>
-            <div class="row justify-content-center">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="delivery_datetime">Izaberite datum i vreme dostave</label>
-                  <input type="text" class="form-control" id="delivery_datetime" name="delivery_datetime" required>
+          </div>
+          <div class="col-md-6 my-3">
+          <div class="sastojak">
+            <img src="images/sastojci/gauda-grozdje-suvivrat.jpg" alt="Gauda, grožđe i suvi vrat" />
+            <p>
+            
+              Gauda kao jedan od najpoznatijih holandskih sireva, a naša nemačka
+              verzija donosi savršen balans slatkoće i pikantnosti. Suvi vrat iz
+              Crne Gore je autentična delikatesa napravljena od pažljivo odabranog
+              svinjskog mesa. Proizvodi se tradicionalnim metodama sušenja i
+              začinjavanja.Sveže grožđe donosi osvežavajuću slatkoću i sočnost.
+              Idealan je partner za sireve i orašaste plodove, stvarajući savršen
+              balans ukusa.
+            </p>
+          </div>
+          </div>
+          <div class="col-md-6 my-3">
+          <div class="sastojak reversed">
+            <p>
+              
+              Crna cokolada obogacuje ukus nasoj kutiji svojim intenzitetom, čak sa 75% kakaa.
+              Uživajte u slatkom i prirodnom ukusu suvih kajsija koje dodaju savršen kontrast slanim i pikantnim ukusima ostalih delikatesa u našoj kutiji.
+            
+             </p>
+            <img src="images/sastojci/kajsija-cokolada.jpg" alt="Kajsija i čokolada" />
+          </div>
+          </div>
+          <div class="col-md-6 my-3">
+          <div class="sastojak">
+            <img src="images/sastojci/masline-krekeri-prsuta.jpg" alt="Masline, krekeri i pršuta" />
+            <p>
+              Masline dodaju suptilnu slanost i bogatstvo ukusa. Odabrane su zbog
+              svoje kvalitete i savršeno se uklapaju sa sirevima i mesnim
+              delicijama. Naši hrskavi krekeri su idealna baza za sireve, meso i
+              med. Njihova neutralna i blago slana aroma savršeno dopunjuje bogate
+              ukuse ostalih sastojaka. Goveđa pršuta – suptilna snaga ukusa, dimljena tradicijom i sečena na zalogaje koji govore više od reči.
+            </p>
+              </div>
+          </div>
+          <div class="col-md-6 my-3">
+          <div class="sastojak reversed">
+            <p>
+               
+              Domaći med sa liofilizovanim vocem u našoj kutiji su to limun i borovnica dodaju prirodnu slatkoću i autentičan ukus vašem obroku. Naša kutija sadrži pažljivo odabrane orašaste
+              plodove kao što su bademi, orasi, lešnici i pistaci. Ovi hrskavi i
+              hranljivi plodovi dodaju dodatni sloj teksture i ukusa vašem
+              gurmanskom iskustvu. Naš kremasti plavi sir iz Danske ima
+              jedinstven, oštar ukus i glatku teksturu.
+              </p>
+            <img src="images/sastojci/med-orasasti-gorgonzola.jpg" alt="Med, orašasti plodovi i gorgonzola" />
+          </div>
+          </div>
+          <div class="col-md-6 my-3">
+          <div class="sastojak">
+            <img src="images/sastojci/parmezan-prsuta.jpg" alt="Parmezan i pršuta" />
+            <p>
+              Pršuta nam dolazi pravo iz  Slovenije i pravi je užitak za ljubitelje finih ukusa. Slovenačka pršuta je tanko sečena, sa boga
+              m, dimljenim ukusom koji savršeno dopunjuje svaki obrok.
+              Grana Padano je sir iz porodice parmezana koji ima zlatno žutu boju, zrnastu teksturu i bogat, pun ukus sa notama oraha i karamele.
+      
+            </p>
+          </div>
+       
+        </div>
+      </section>
+      <!-- <section>
+        <h1 id="ponuda">Ponuda</h1>
+        <div class="line"></div>
+      </section> -->
+      <section class="porucivanje" aria-labelledby="ordering-heading">
+        <h2 id="ordering-heading" class="section-heading">Poručivanje</h2>
+        <div class="line" aria-hidden="true"></div>
+        <div class="container pt-5">
+          <form id="orderForm" action="save-order.php" method="POST" aria-label="Order form">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="porudzbina">
+                  <img src="images/porudzbina/mala_1.jpg" alt="">
+                  <p>Box No.1 - mini</p>
+                  <button type="button" class="btn btn-sm btn-outline-secondary details-btn" data-bs-toggle="modal" data-bs-target="#mala1Modal">Detalji</button>
+                  <div class="fixed-price">
+                    <span class="price-label">Cena:</span>
+                    <span class="price-value">6.000 RSD</span>
+                  </div>
+                  <div class="quantity-controls">
+                    <button type="button" class="quantity-btn minus" onclick="updateQuantity('mala1', -1)">-</button>
+                    <span class="quantity" id="mala1">0</span>
+                    <button type="button" class="quantity-btn plus" onclick="updateQuantity('mala1', 1)">+</button>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-amount" id="mala1_price">Ukupno: 0 RSD</span>
+                  </div>
+                  <input type="hidden" name="mala1_quantity" value="0">
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="porudzbina">
+                  <img src="images/porudzbina/mala_2.jpg" alt="">
+                  <p>Box No.2 - mini</p>
+                  <button type="button" class="btn btn-sm btn-outline-secondary details-btn" data-bs-toggle="modal" data-bs-target="#mala2Modal">Detalji</button>
+                  <div class="fixed-price">
+                    <span class="price-label">Cena:</span>
+                    <span class="price-value">6.000 RSD</span>
+                  </div>
+                  <div class="quantity-controls">
+                    <button type="button" class="quantity-btn minus" onclick="updateQuantity('mala2', -1)">-</button>
+                    <span class="quantity" id="mala2">0</span>
+                    <button type="button" class="quantity-btn plus" onclick="updateQuantity('mala2', 1)">+</button>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-amount" id="mala2_price">Ukupno: 0 RSD</span>
+                  </div>
+                  <input type="hidden" name="mala2_quantity" value="0">
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="porudzbina">
+                  <img src="images/porudzbina/srednja.jpg" alt="">
+                  <p>Box No.3 - medium</p>
+                  <button type="button" class="btn btn-sm btn-outline-secondary details-btn" data-bs-toggle="modal" data-bs-target="#srednjaModal">Detalji</button>
+                  <div class="fixed-price">
+                    <span class="price-label">Cena:</span>
+                    <span class="price-value">9.000 RSD</span>
+                  </div>
+                  <div class="quantity-controls">
+                    <button type="button" class="quantity-btn minus" onclick="updateQuantity('srednja', -1)">-</button>
+                    <span class="quantity" id="srednja">0</span>
+                    <button type="button" class="quantity-btn plus" onclick="updateQuantity('srednja', 1)">+</button>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-amount" id="srednja_price">Ukupno: 0 RSD</span>
+                  </div>
+                  <input type="hidden" name="srednja_quantity" value="0">
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="porudzbina">
+                  <img src="images/porudzbina/velika.jpg" alt="">
+                  <p>Box No.4 - large</p>
+                  <button type="button" class="btn btn-sm btn-outline-secondary details-btn" data-bs-toggle="modal" data-bs-target="#velikaModal">Detalji</button>
+                  <div class="fixed-price">
+                    <span class="price-label">Cena:</span>
+                    <span class="price-value">15.000 RSD</span>
+                  </div>
+                  <div class="quantity-controls">
+                    <button type="button" class="quantity-btn minus" onclick="updateQuantity('velika', -1)">-</button>
+                    <span class="quantity" id="velika">0</span>
+                    <button type="button" class="quantity-btn plus" onclick="updateQuantity('velika', 1)">+</button>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-amount" id="velika_price">Ukupno: 0 RSD</span>
+                  </div>
+                  <input type="hidden" name="velika_quantity" value="0">
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="customer-info mt-5">
-            <h3 class="text-center mb-4">Vaši podaci</h3>
-            <div class="row justify-content-center">
-              <div class="col-md-10">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group mb-3">
-                      <label for="ime">Ime</label>
-                      <input type="text" class="form-control" id="ime" name="ime" required>
-                    </div>
+            <div class="delivery-time mt-5">
+              <h3 class="text-center mb-4">Vreme dostave</h3>
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="delivery_datetime" id="delivery_datetime_label">Izaberite datum i vreme dostave</label>
+                    <input type="text" class="form-control" id="delivery_datetime" name="delivery_datetime" required aria-labelledby="delivery_datetime_label">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="customer-info mt-5">
+              <h3 class="text-center mb-4">Vaši podaci</h3>
+              <div class="row justify-content-center">
+                <div class="col-md-10">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group mb-3">
+                        <label for="ime" id="ime_label">Ime</label>
+                        <input type="text" class="form-control" id="ime" name="ime" required aria-labelledby="ime_label">
+                      </div>
                     </div>
                     <div class="col-md-6">
-                    <div class="form-group mb-3">
-                      <label for="prezime">Prezime</label>
-                      <input type="text" class="form-control" id="prezime" name="prezime" required>
+                      <div class="form-group mb-3">
+                        <label for="prezime" id="prezime_label">Prezime</label>
+                        <input type="text" class="form-control" id="prezime" name="prezime" required aria-labelledby="prezime_label">
+                      </div>
                     </div>
-                  </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
-                    <div class="form-group mb-3">
-                      <label for="telefon">Broj telefona</label>
-                      <input type="tel" class="form-control" id="telefon" name="telefon" required>
+                      <div class="form-group mb-3">
+                        <label for="telefon" id="telefon_label">Broj telefona</label>
+                        <input type="tel" class="form-control" id="telefon" name="telefon" required aria-labelledby="telefon_label">
                       </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group mb-3">
-                      <label for="adresa">Adresa</label>
-                      <input type="text" class="form-control" id="adresa" name="adresa" required>
-                    </div>
                     </div>
                     <div class="col-md-6">
-                    <div class="form-group mb-3">
-                      <label for="email">Email</label>
-                      <input type="email" class="form-control" id="email" name="email" required>
-                    </div>  
+                      <div class="form-group mb-3">
+                        <label for="adresa" id="adresa_label">Adresa</label>
+                        <input type="text" class="form-control" id="adresa" name="adresa" required aria-labelledby="adresa_label">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group mb-3">
+                        <label for="email" id="email_label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required aria-labelledby="email_label">
+                      </div>  
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="checkout-summary mt-5" style="display: none;">
-            <h3 class="text-center mb-4">Pregled porudžbine</h3>
-            <div class="order-items">
-              <!-- Order items will be dynamically added here -->
+            <div class="checkout-summary mt-5" style="display: none;">
+              <h3 class="text-center mb-4">Pregled porudžbine</h3>
+              <div class="order-items">
+                <!-- Order items will be dynamically added here -->
+              </div>
+              <div class="order-total">
+                <h4>Ukupno za plaćanje:</h4>
+                <h4 class="total-amount">0 RSD</h4>
+              </div>
             </div>
-            <div class="order-total">
-              <h4>Ukupno za plaćanje:</h4>
-              <h4 class="total-amount">0 RSD</h4>
+
+            <div class="text-center mt-4">
+              <button type="submit" class="submit-btn">Poruči</button>
             </div>
-          </div>
+          </form>
+        </div>
 
-          <div class="text-center mt-4">
-            <button type="submit" class="submit-btn">Poruči</button>
-          </div>
-        </form>
-      </div>
+        <!-- Add Flatpickr CSS and JS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/sr.js"></script>
 
-      <!-- Add Flatpickr CSS and JS -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-      <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/sr.js"></script>
-
-      <!-- Add this to your existing scripts -->
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          // Initialize Flatpickr
-          flatpickr("#delivery_datetime", {
-            enableTime: true,
-            dateFormat: "d.m.Y H:i",
-            minDate: "today",
-            time_24hr: true,
-            minuteIncrement: 30,
-            locale: "sr",
-            theme: "light",
-            placeholder: "Izaberite datum i vreme dostave",
-            // Custom colors to match website theme
-            theme: "light",
-            customClass: "delicure-calendar"
+        <!-- Add this to your existing scripts -->
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Flatpickr
+            flatpickr("#delivery_datetime", {
+              enableTime: true,
+              dateFormat: "d.m.Y H:i",
+              minDate: "today",
+              time_24hr: true,
+              minuteIncrement: 30,
+              locale: "sr",
+              theme: "light",
+              placeholder: "Izaberite datum i vreme dostave",
+              // Custom colors to match website theme
+              theme: "light",
+              customClass: "delicure-calendar"
+            });
           });
-        });
-      </script>
-    </section>
-    <footer class="footer">
+        </script>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
       <div class="footer-content">
         <div class="footer-section">
           <h3>Deli Cure</h3>
           <p>U svakom zalogaju krije se svet bogatih aroma i luksuznih sastojaka.</p>
           <div class="social-links">
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-link" aria-label="Visit our Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" class="social-link" aria-label="Contact us on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="footer-section">
