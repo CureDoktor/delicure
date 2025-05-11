@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Deli Cure - Luksuzne charcuterie kutije sa najfinijim sirevima i suhomesnatim delikatesama. Savršen izbor za gurmansko uživanje i posebne prilike." />
-    <title>Deli Cure</title>
+    <title>delicure</title>
     <link rel="icon" type="image/x-icon" href="images/Delicure.ico" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -77,7 +77,7 @@
     </navbar>
     <header class="header" role="banner">
       <div class="container d-flex justify-content-center align-items-center">
-        <h1 class="hero-header">
+        <h1 class="hero-header text-center">
           U svakom zalogaju krije se svet bogatih aroma i luksuznih sastojaka.
         </h1>
       </div>
@@ -868,6 +868,7 @@
             
             // Create order data object
             const orderData = {
+                order_id: generateOrderId(),
                 customer: {
                     ime: formData.get('ime'),
                     prezime: formData.get('prezime'),
@@ -918,7 +919,7 @@
             const orderItems = [];
             if (orderData.items.mala1.quantity > 0) {
                 orderItems.push({
-                    name: "Mala kutija 1",
+                    name: "Box No.1-mini",
                     units: orderData.items.mala1.quantity,
                     price: 6000,
                     image_url: "https://delicure.rs/images/porudzbina/mala_1.jpg"
@@ -926,7 +927,7 @@
             }
             if (orderData.items.mala2.quantity > 0) {
                 orderItems.push({
-                    name: "Mala kutija 2",
+                    name: "Box No.2-mini",
                     units: orderData.items.mala2.quantity,
                     price: 6000,
                     image_url: "https://delicure.rs/images/porudzbina/mala_2.jpg"
@@ -934,7 +935,7 @@
             }
             if (orderData.items.srednja.quantity > 0) {
                 orderItems.push({
-                    name: "Srednja kutija",
+                    name: "Box No.3-medium",
                     units: orderData.items.srednja.quantity,
                     price: 9000,
                     image_url: "https://delicure.rs/images/porudzbina/srednja.jpg"
@@ -942,7 +943,7 @@
             }
             if (orderData.items.velika.quantity > 0) {
                 orderItems.push({
-                    name: "Velika kutija",
+                    name: "Box No.4-large",
                     units: orderData.items.velika.quantity,
                     price: 15000,
                     image_url: "https://delicure.rs/images/porudzbina/velika.jpg"
@@ -953,7 +954,7 @@
 
             // Prepare template parameters
             const templateParams = {
-                order_id: 'ORD-' + new Date().getTime(),
+                order_id: orderData.order_id,
                 orders: orderItems,
                 cost: {
                     total: orderTotal
@@ -971,7 +972,7 @@
             emailjs.send("service_w2xisho", "template_u01zony", templateParams)
                 .then((response) => {
                     console.log("Email sent successfully:", response);
-                    alert("Vaša porudžbina je uspešno primljena. Kontaktiraćemo vas uskoro.");
+                    alert(`Vaša porudžbina je uspešno primljena. Broj vaše porudžbine je: ${orderData.order_id}. Kontaktiraćemo vas uskoro.`);
                     
                     // Reset form
                     this.reset();
@@ -996,6 +997,16 @@
           });
         }
       });
+
+      // Function to generate a professional order ID
+      function generateOrderId() {
+        const date = new Date();
+        const year = date.getFullYear().toString().slice(-2);
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        const day = date.getDate().toString().padStart(2, '0');
+        const random = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
+        return `DC${year}${month}${day}-${random}`;
+      }
     </script>
     <!-- Product Detail Modals -->
     <!-- Mala 1 Modal -->
