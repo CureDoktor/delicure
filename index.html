@@ -128,7 +128,7 @@
             <p>
               Bri ima glatku, kremastu teksturu i blag, masni ukus sa blagim
               notama orašastih plodova i gljiva.
-              Saće kao savrsen dodatak bri siru na kojem se i nalazi predstavlja savršenu kombinaciju punog ukusa i slatkoće.
+              Saće kao savršen dodatak bri siru na kojem se i nalazi predstavlja savršenu kombinaciju punog ukusa i slatkoće.
               Suva španska kobasica je napravljena od bogatog ukusnog iberijskog mesa i prirodnom belom korom koja čuva aromu i daje zemljastu notu, idealna  je za fine zalogaje uz sir i vino.
            
             </p>
@@ -140,11 +140,11 @@
             <img src="images/sastojci/gauda-grozdje-suvivrat.jpg" alt="Gauda, grožđe i suvi vrat" />
             <p>
             
-              Gauda kao jedan od najpoznatijih holandskih sireva, a naša nemačka
-              verzija donosi savršen balans slatkoće i pikantnosti. Suvi vrat iz
+              Gauda kao jedan od najpoznatijih holandskih sireva,
+              donosi savršen balans slatkoće i pikantnosti. Suvi vrat iz
               Crne Gore je autentična delikatesa napravljena od pažljivo odabranog
               svinjskog mesa. Proizvodi se tradicionalnim metodama sušenja i
-              začinjavanja.Sveže grožđe donosi osvežavajuću slatkoću i sočnost.
+              začinjavanja. Sveže grožđe donosi osvežavajuću slatkoću i sočnost.
               Idealan je partner za sireve i orašaste plodove, stvarajući savršen
               balans ukusa.
             </p>
@@ -154,7 +154,7 @@
           <div class="sastojak reversed">
             <p>
               
-              Crna cokolada obogacuje ukus nasoj kutiji svojim intenzitetom, čak sa 75% kakaa.
+              Crna čokolada obogaćuje ukus našoj kutiji svojim intenzitetom, čak sa 75% kakaa.
               Uživajte u slatkom i prirodnom ukusu suvih kajsija koje dodaju savršen kontrast slanim i pikantnim ukusima ostalih delikatesa u našoj kutiji.
             
              </p>
@@ -165,8 +165,8 @@
           <div class="sastojak">
             <img src="images/sastojci/masline-krekeri-prsuta.jpg" alt="Masline, krekeri i pršuta" />
             <p>
-              Masline dodaju suptilnu slanost i bogatstvo ukusa. Odabrane su zbog
-              svoje kvalitete i savršeno se uklapaju sa sirevima i mesnim
+              Masline dodaju suptilnu slanoću i bogatstvo svakom zalogaju. Odabrane su zbog
+              svog kvaliteta i savršeno se uklapaju sa sirevima i mesnim
               delicijama. Naši hrskavi krekeri su idealna baza za sireve, meso i
               med. Njihova neutralna i blago slana aroma savršeno dopunjuje bogate
               ukuse ostalih sastojaka. Goveđa pršuta – suptilna snaga ukusa, dimljena tradicijom i sečena na zalogaje koji govore više od reči.
@@ -177,7 +177,7 @@
           <div class="sastojak reversed">
             <p>
                
-              Domaći med sa liofilizovanim vocem u našoj kutiji su to limun i borovnica dodaju prirodnu slatkoću i autentičan ukus vašem obroku. Naša kutija sadrži pažljivo odabrane orašaste
+              Domaći med sa liofilizovanim voćem, limunom i borovnicom, dodaju prirodnu slatkoću i autentičan ukus vašem obroku. Naša kutija sadrži pažljivo odabrane orašaste
               plodove kao što su bademi, orasi, lešnici i pistaci. Ovi hrskavi i
               hranljivi plodovi dodaju dodatni sloj teksture i ukusa vašem
               gurmanskom iskustvu. Naš kremasti plavi sir iz Danske ima
@@ -558,7 +558,7 @@
         const prices = {
           mala1: 6000,
           mala2: 6000,
-          srednja: 9000,
+          srednja: 10000,
           velika: 15000
         };
 
@@ -730,7 +730,7 @@
                     },
                     srednja: {
                         quantity: parseInt(formData.get('srednja_quantity')),
-                        total: parseInt(formData.get('srednja_quantity')) * 9000
+                        total: parseInt(formData.get('srednja_quantity')) * 10000
                     },
                     velika: {
                         quantity: parseInt(formData.get('velika_quantity')),
@@ -739,7 +739,7 @@
                 },
                 total: parseInt(formData.get('mala1_quantity')) * 6000 + 
                        parseInt(formData.get('mala2_quantity')) * 6000 + 
-                       parseInt(formData.get('srednja_quantity')) * 9000 + 
+                       parseInt(formData.get('srednja_quantity')) * 10000 + 
                        parseInt(formData.get('velika_quantity')) * 15000
             };
 
@@ -777,7 +777,7 @@
                 orderItems.push({
                     name: "Box No.3-medium",
                     units: orderData.items.srednja.quantity,
-                    price: 9000,
+                    price: 10000,
                     image_url: "https://delicure.rs/images/porudzbina/srednja.jpg"
                 });
             }
